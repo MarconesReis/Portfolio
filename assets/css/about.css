@@ -1,0 +1,336 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #111103de;
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal */
+}
+
+h1,
+h2 {
+    color: #ff9900;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: -17px;
+    margin-bottom: 45px;
+    margin-left: 20px;
+}
+
+.contact p {
+    margin-bottom: -4px;
+    line-height: 0.9;
+}
+
+.container {
+    width: 100%;
+    height: 927px;
+    max-width: 1200px;
+    /* Définit la largeur maximale */
+    margin: 0 auto;
+    /* Centre le conteneur horizontalement */
+    background-color: #050202;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 0;
+    background: #000;
+}
+
+.logo .logo-icon {
+    background: #ff9900;
+    color: #fff;
+    margin-top: -37px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem;
+    margin-right: 74px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 535px;
+    background-color: #030303;
+    background-image: url(images/c-about.png);
+    background-size: 92%;
+    background-repeat: no-repeat;
+    background-position: 251% -74%;
+    position: relative;
+    z-index: 1;
+    padding-left: 30px;
+}
+
+p {
+    margin-top: 52px;
+    color: #fff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152%;
+}
+
+.btn-submit {
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 3.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    margin-right: 0px;
+    transition: background-color 0.3s;
+    position: absolute;
+    /* Permet un positionnement flexible */
+    bottom: -114px;
+    right: -38px;
+}
+
+.btn-submit:hover {
+    background-color: #CC7A00;
+    ;
+}
+
+.about-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    right: 0px;
+    /* Inverser la position de la gauche à la droite */
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.about-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    right: 0;
+    /* Inverser la position de la gauche à la droite */
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.about-form-container {
+    z-index: 2;
+}
+
+.send {
+    background-color: #1a1a1a;
+    height: 115px;
+    text-align: center;
+}
+
+footer {
+    background-color: #030303;
+    padding: 2rem;
+    padding-top: 17px;
+    padding-bottom: 0;
+    height: 252px;
+    display: block;
+    justify-content: space-around;
+    text-align: left;
+}
+
+footer h3 {
+    color: #fff;
+    text-align: center;
+}
+
+footer p,
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer .back-to-top a {
+    color: #ff9900;
+}
+
+.footer-content {
+    text-align: center;
+    /* Centre le contenu du footer */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    /* Centre les icônes horizontalement */
+    gap: 5rem;
+    /* Ajoute un espace entre les icônes */
+    flex-wrap: wrap;
+    /* Permet d'envelopper les éléments si l'espace est restreint */
+}
+
+.social-media a {
+    display: flex;
+    flex-direction: column;
+    /* Positionne les icônes au-dessus du texte */
+    align-items: center;
+    /* Centre le contenu de chaque lien */
+    text-decoration: none;
+    /* Supprime le soulignement du texte */
+}
+
+.social-media img {
+    max-width: 50px;
+    /* Ajuste la taille des icônes si nécessaire */
+    height: auto;
+    margin-bottom: 10px;
+    /* Espace entre l'icône et le texte */
+}
+
+.social-media p {
+    margin: 0;
+    /* Supprime la marge par défaut */
+    color: #cccccc;
+    ;
+    /* Assurez-vous que la couleur du texte est correcte */
+    font-size: 1rem;
+    /* Ajuste la taille du texte */
+}
+
+.footer-copyright p {
+    margin: 0;
+    /* Supprimer les marges par défaut autour du texte */
+    line-height: 1.5;
+    /* Espacement entre les lignes */
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Positionnement des formes géométriques */
+.shapes-container {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    /* Ajustez la hauteur si nécessaire */
+    margin-top: 0;
+}
+
+.rectangle-shape,
+.ellipse-shape {
+    position: absolute;
+    z-index: 1;
+    /* Inférieur aux éléments cliquables */
+}
+
+.rectangle-shape {
+    top: -13px;
+    left: 254px;
+    width: 573px;
+    height: 60px;
+    background-color: rgba(218, 218, 218, 0.11);
+    /* Couleur du rectangle */
+    transform: translateX(-50%);
+}
+
+.ellipse-shape {
+    bottom: -66px;
+    left: 37%;
+    width: 180px;
+    height: 180px;
+    background-color: #df843953;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+/* Liens et éléments interactifs */
+.social-media a {
+    position: relative;
+    z-index: 2;
+    /* Plus élevé pour être au-dessus des formes géométriques */
+    display: flex;
+    flex-direction: column;
+    /* Positionne les icônes au-dessus du texte */
+    align-items: center;
+    /* Centre le contenu de chaque lien */
+    text-decoration: none;
+    /* Supprime le soulignement du texte */
+}
+
+.social-media img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    margin: 0 auto;
+    /* Centre l'élément dans la page */
+    text-align: center;
+    margin-top: 52px;
+    color: #ccc;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
+    /* Plus élevé pour être au-dessus des formes géométriques */
+}
+
+/* Icône de retour en haut */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 130px;
+    z-index: 1000;
+    /* Assurez que l'icône reste toujours visible */
+}
+
+.back-to-top img {
+    width: 40px;
+    height: 40px;
+}
+
+body.scrolled .back-to-top {
+    display: block;
+    /* Affiche l'icône après avoir défilé vers le bas */
+}
+
+/* Section Suivez-moi */
+footer h3 {
+    color: #fff;
+    text-align: center;
+}
+
+footer p,
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    /* Assurez que le contenu reste au-dessus des formes géométriques */
+}

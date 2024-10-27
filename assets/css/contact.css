@@ -1,0 +1,241 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #111103de;
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal */
+}
+
+h1,
+h2 {
+    color: #ff9900;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: -17px;
+    margin-bottom: 45px;
+    margin-left: 20px;
+}
+
+.contact p {
+    margin-bottom: -4px;
+    line-height: 0.9;
+}
+
+.container {
+    width: 100%;
+    height: 927px;
+    max-width: 1200px;
+    /* Définit la largeur maximale */
+    margin: 0 auto;
+    /* Centre le conteneur horizontalement */
+    background-color: #050202;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 0;
+    background: #000;
+}
+
+.logo .logo-icon {
+    background: #ff9900;
+    color: #fff;
+    margin-top: -37px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem;
+    margin-right: 74px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 535px;
+    background-color: #030303;
+    background-image: url(/assets/images/backgrounds/Contact-background.png);
+    background-size: 57%;
+    background-repeat: no-repeat;
+    background-position: 97% 0%;
+    position: relative;
+    z-index: 1;
+    padding-left: 30px;
+}
+
+
+.contact-form-container {
+    width: 100%;
+    max-width: 578px;
+    background-color: #1A1A1A;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Pour le positionnement absolu du bouton */
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 0fr 3fr;
+    /* Ajuste les colonnes pour donner plus d'espace aux champs d'entrée */
+    gap: 15px;
+    /* Espace entre les labels et les champs */
+    align-items: center;
+}
+
+.form-group {
+    display: contents;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    /* Aligne les labels à gauche */
+    padding-right: 0px;
+    /* Supprime tout padding supplémentaire */
+    margin: 0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #aaaaaa;
+    background-color: #1A1A1A;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    /* Assure que les champs restent à l'intérieur du conteneur */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FF9900;
+}
+
+.btn-submit {
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 3.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    margin-right: 0px;
+    transition: background-color 0.3s;
+    position: absolute;
+    /* Permet un positionnement flexible */
+    bottom: -114px;
+    right: -38px;
+}
+
+.btn-submit:hover {
+    background-color: #CC7A00;
+    ;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    box-sizing: border-box;
+
+}
+
+.contact-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    right: 0px;
+    /* Inverser la position de la gauche à la droite */
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.contact-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    right: 0;
+    /* Inverser la position de la gauche à la droite */
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.contact-form-container {
+    z-index: 2;
+}
+
+.send {
+    background-color: #1a1a1a;
+    height: 115px;
+    text-align: center;
+}
+
+.title_h3_footer {
+    color: #fff;
+    text-align: center;
+}
+
+.paragraph_footer{
+    color: #fff;
+}
+
+.footer-content {
+    width: 100%;
+    overflow: hidden;
+    background-color: #030303;
+    position: relative;
+}
+
+.social-media {
+    display: flex;
+}
+
+.link_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: auto;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.copyright{
+    text-align: center;
+    margin: 35px 0 20px;
+}

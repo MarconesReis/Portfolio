@@ -1,0 +1,685 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #111103de;
+    overflow-x: hidden;  /* Empêche le défilement horizontal */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 0;
+    background: #000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Définit la largeur maximale */
+    margin: 0 auto;  /* Centre le conteneur horizontalement */
+    background-color: #050202;
+}
+
+
+.title_h1, .title_h2, .nav_link {
+    color: #ff9900;
+
+}
+.logo .logo-icon {
+    background: #ff9900;
+    color: #fff;
+    margin-top: -37px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 3.5rem;
+    margin-right: 74px;
+}
+
+.nav_link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold; 
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease; 
+}
+
+.nav_link:hover{
+    border-color: #ff9900;;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.hero {
+    height: 560px;
+    position: relative;  /* Nécessaire pour positionner les rectangles à l'intérieur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('/assets/images/backgrounds/Accueil-background.png') no-repeat center center; /* Ajouter l'image de fond */
+    background-size: 75%; /* Redimensionner l'image pour qu'elle soit entièrement visible */
+    background-position: center right; /* Positionner l'image plus à droite */
+    background-color: #000;
+    transition: background 0.5s ease-in;
+}
+
+.hero:hover{
+    background: url('/assets/images/backgrounds/Contact-background.png') no-repeat center center; /* Ajouter l'image de fond */
+    background-size: 72%; /* Redimensionner l'image pour qu'elle soit entièrement visible */
+    background-position: center right; /* Positionner l'image plus à droite */
+}
+
+.span_nav{
+    font-size: 3.5rem;
+    color: #fff;
+    margin-top: -12px;
+    font-weight: bold;
+}
+
+.hero-text {
+    max-width: 50%;
+    margin-left: 30px;
+    position: relative; /* Assure que le texte est au-dessus de l'image de fond */
+    z-index: 2; /* Positionne le texte au-dessus de l'image de fond */
+}
+
+.title_h1, .title_h2 {
+    font-size: 2rem;
+    color: #ff9900;
+}
+
+.hero_paragraph {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.hero-vertical-rectangle {
+    position: relative;
+    width: 598px;
+    height: 60px;
+    background: rgba(218, 218, 218, 0.11);
+    top: 304px;
+    right: 0px;
+    z-index: 2;
+}
+
+.hero-ellipse {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: #df843953;
+    border-radius: 90px;
+    top: 123px;
+    left: 387px;
+    z-index: 10;
+}
+
+.contact_marcones{
+    /* display: none; */
+    opacity: 0;
+    border-radius: 50%;
+    width: 180px;
+    transition: opacity 0.5s ease;
+}
+
+.button-contact {
+    position: absolute;
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    margin-top: 130px;
+    margin-left: -133px;
+    z-index: 30;
+    transition: display 0.5s ease;
+}
+
+/* Rend l'image visible */
+.button-contact:hover + .contact_marcones{
+    opacity: 1;
+}
+/* ***************************** Carousel ********************************* */
+
+.carousel_title{
+    text-align: center;
+    margin: 10px;
+    font-size: 22px;
+}
+
+.carousel_logos {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: relative;
+}
+
+.carousel {
+    display: flex;  
+}
+
+.carousel img {
+    width: auto;
+    height: 65px;
+    margin-bottom: 8px;
+}
+/********************************* Carousel Conviction **********************************/
+
+.carousel_conviction {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: relative;
+    padding: 20px 0;
+}
+
+.second_carousel {
+    display: flex;
+}
+
+.second_carousel img {
+    height: 65px;
+    width: auto;
+    margin: 0; /* Assure qu'il n'y a pas de marge entre les images */
+}
+
+.conviction {
+    display: flex;
+    justify-content: space-between;
+    height: 700px;
+    background-color: #030303;
+    background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: 6% 53%;
+    position: relative;
+    z-index: 1;
+}
+
+.conviction-text {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.conviction-text h1 {
+    display: flex;
+    align-items: center;  
+    margin-top: 71px;
+    margin-bottom: 226px;
+    justify-content: center;
+}
+
+.conviction-text p {
+    margin-top: 52px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152%; /* 30.4px */
+}
+
+.conviction-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0px;
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.conviction-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.conviction-rectangle {
+    position: relative;
+    width: 598px;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(218, 218, 218, 0.11);
+    top: 29px;
+    left: 602px;
+    z-index: 20;
+}
+
+.conviction-ellipse {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: #df843953;
+    border-radius: 90px;
+    top: 115px;
+    left: 988px;
+    z-index: 10;
+}
+
+.stats-conviction {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+}
+
+.stats-conviction img {
+    width: 45px;
+    height: 45px;
+}
+
+
+hr {
+    width: 1086px;
+    border: none;
+    margin: 0;
+    height: 2px;
+    background-color: #ff9900; /* Couleur de la ligne */
+}
+
+.hr-two {
+    margin-left: 114px;
+}
+
+
+.project-rectangles .project-rectangles-midlles {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.project-vertical-rectangle  {
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    width: 110px;
+    height: 183px;
+    background: rgba(223, 133, 57, 0.20);
+}
+.project-horizontal-rectangle {
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    width: 262px;
+    height: 62px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.midlles-vertical-rectangle {
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    width: 110px;
+    height: 183px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.midlles-horizontal-rectangle {
+    position: absolute;
+    top: 34px;
+    right: 0px;
+    width: 262px;
+    height: 62px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.projects img {
+    width: 750px;
+    height: 750px;
+}
+
+.projects a {
+    color: #fba034; /* Couleur du lien, comme dans l'image */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+}
+
+.projects a:hover {
+    text-decoration: underline; /* Ajouter un soulignement au survol pour indiquer un lien */
+}
+
+.projects h1 {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+}
+
+.projects h2 {
+    text-align: center;
+}
+
+.projects p {
+    padding: 25px;
+}
+
+.my-projects-top {
+    text-align: center;
+}
+
+.my-projects-botton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-projects-botton > div {
+    flex: 1;
+    margin: 10px;
+}
+
+.projects img {
+    width: 98%; /* Ajuste l'image pour qu'elle remplisse toute la largeur de la colonne */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+.youtube img {
+    transform: rotate(11deg);
+}
+
+.my-projects-botton {
+    display: flex;
+}
+
+
+.youtube {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    background-color: #030303;
+    background-image: url(/assets/images/projects/Portable-youtube.png);
+    background-size: 78%;
+    background-repeat: no-repeat;
+    background-position: -27% 59%;
+    position: relative;
+    z-index: 1;
+}
+
+.youtube-text {
+    margin-left: 135px;
+}
+
+.youtube-text h1 {
+    display: flex;
+    align-items: center;  
+    margin-top: 118px;
+    margin-bottom: 90px;
+    justify-content: center;
+}
+
+.youtube-text p {
+    margin-top: 52px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152%; /* 30.4px */
+}
+
+.youtube-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0px;
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.youtube-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.youtube-rectangle {
+    position: relative;
+    width: 598px;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(218, 218, 218, 0.11);
+    top: -21px;
+    left: 602px;
+    z-index: 20;
+}
+
+.youtube-ellipse {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: #df843953;
+    border-radius: 90px;
+    top: 55px;
+    left: 988px;
+    z-index: 10;
+}
+
+.marcontech {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    background-color: #030303;
+    background-image: url(/assets/images/projects/Ordinateur-guiartech.png);
+    background-size: 57%;
+    background-repeat: no-repeat;
+    background-position: 83% 63%;
+    position: relative;
+    z-index: 1;
+}
+
+.marcontech-text {
+    margin-right: 135px; /* Inverser la marge pour positionner le texte à droite */
+}
+
+.marcontech-text h1 {
+    display: flex;
+    align-items: center;  
+    margin-top: 118px;
+    margin-bottom: 90px;
+    justify-content: center;
+}
+
+.marcontech-text p {
+    margin-top: 52px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152%; /* 30.4px */
+}
+
+.marcontech-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    right: 0px; /* Inverser la position de la gauche à la droite */
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.marcontech-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    right: 0; /* Inverser la position de la gauche à la droite */
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.marcontech-rectangle {
+    position: relative;
+    width: 598px;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(218, 218, 218, 0.11);
+    top: -21px;
+    right: 602px; /* Inverser la position de la gauche à la droite */
+    z-index: 20;
+}
+
+.marcontech-ellipse {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: #df843953;
+    border-radius: 90px;
+    top: 55px;
+    right: 567px; /* Inverser la position de la gauche à la droite */
+    z-index: 10;
+}
+
+.volunteering {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    background-color: #030303;
+    background-image: url(/assets/images/projects/Tablette-volunteering.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 18% 59%;
+    position: relative;
+    z-index: 1;
+}
+
+.volunteering-text {
+    margin-left: 135px;
+}
+
+.volunteering-text h1 {
+    display: flex;
+    align-items: center;  
+    margin-top: 118px;
+    margin-bottom: 90px;
+    justify-content: center;
+}
+
+.volunteering-text p {
+    margin-top: 52px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152%; /* 30.4px */
+}
+
+.volunteering-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0px;
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.20);
+}
+
+.volunteering-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+}
+
+.volunteering-rectangle {
+    position: relative;
+    width: 480px;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(218, 218, 218, 0.11);
+    top: -21px;
+    left: 720px;
+    z-index: 20;
+}
+
+.volunteering-ellipse {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background: #df843953;
+    border-radius: 90px;
+    top: 55px;
+    left: 988px;
+    z-index: 10;
+}
+
+.follow-me {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.follow-me button {
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 3.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    margin: 0px;
+}
+
+/* ********************* Footer ********************** */
+
+.title_h3_footer {
+    color: #fff;
+    text-align: center;
+}
+
+.paragraph_footer{
+    color: #fff;
+}
+
+.footer-content {
+    width: 100%;
+    overflow: hidden;
+    background-color: #030303;
+    position: relative;
+}
+
+.social-media {
+    display: flex;
+}
+
+.link_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: auto;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.copyright{
+    text-align: center;
+    margin: 35px 0 20px;
+}
+
+/* Icône de retour en haut */
+.back-to-top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 130px;
+    z-index: 1000;  /* Assurez que l'icône reste toujours visible */
+}
