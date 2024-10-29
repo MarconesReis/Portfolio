@@ -107,26 +107,27 @@ body {
     margin: 1rem 0;
     font-size: 1.1rem;
     line-height: 1.5;
+    padding-right: 70px;
 }
 
 .hero-vertical-rectangle {
-    position: relative;
-    width: 598px;
+    position: absolute;
+    width: 50%;
     height: 60px;
     background: rgba(218, 218, 218, 0.11);
-    top: 304px;
+    bottom: 60px;
     right: 0px;
     z-index: 2;
 }
 
 .hero-ellipse {
-    position: relative;
+    position: absolute;
     width: 180px;
     height: 180px;
     background: #df843953;
     border-radius: 90px;
-    top: 123px;
-    left: 387px;
+    bottom: 30px;
+    right: 30px;
     z-index: 10;
 }
 
@@ -147,8 +148,8 @@ body {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 21px;
-    margin-top: 130px;
-    margin-left: -133px;
+    bottom: 39px;
+    right: 237px;
     z-index: 30;
     transition: display 0.5s ease;
 }
@@ -216,12 +217,12 @@ body {
 
 .conviction-rectangle {
     position: absolute;
-    width: 598px;
+    width: 50%;
     height: 60px;
     flex-shrink: 0;
     background: rgba(218, 218, 218, 0.11);
     top: 60px;
-    left: 602px;
+    right: 0px;
     z-index: 20;
 }
 
@@ -232,7 +233,7 @@ body {
     background: #df843953;
     border-radius: 90px;
     top: 30px;
-    left: 988px;
+    right: 30px;
     z-index: 10;
 }
 
@@ -295,121 +296,16 @@ body {
 /* ********************* Section My Projects *********************** */
 
 .hr_division {
-    width: 1086px;
+    width: 90%;
     border: none;
     margin: 0;
     height: 2px;
     background-color: #ff9900; /* Couleur de la ligne */
 }
 
-.project-rectangles .project-rectangles-midlles {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.project-vertical-rectangle  {
-    position: absolute;
-    top: 34px;
-    right: 0px;
-    width: 110px;
-    height: 183px;
-    background: rgba(223, 133, 57, 0.20);
-}
-.project-horizontal-rectangle {
-    position: absolute;
-    top: 34px;
-    right: 0px;
-    width: 262px;
-    height: 62px;
-    background: rgba(218, 218, 218, 0.11);
-}
-
-.midlles-vertical-rectangle {
-    position: absolute;
-    top: 34px;
-    right: 0px;
-    width: 110px;
-    height: 183px;
-    background: rgba(223, 133, 57, 0.20);
-}
-
-.midlles-horizontal-rectangle {
-    position: absolute;
-    top: 34px;
-    right: 0px;
-    width: 262px;
-    height: 62px;
-    background: rgba(218, 218, 218, 0.11);
-}
-
-.projects img {
-    width: 750px;
-    height: 750px;
-}
-
-.projects a {
-    color: #fba034; /* Couleur du lien, comme dans l'image */
-    text-decoration: none; /* Supprimer le soulignement du lien */
-}
-
-.projects a:hover {
-    text-decoration: underline; /* Ajouter un soulignement au survol pour indiquer un lien */
-}
-
-.projects h2 {
-    text-align: center;
-}
-
-.projects p {
-    padding: 25px;
-}
-
 .my-projects-top {
     text-align: center;
-}
-
-.my-projects-botton {
-    display: flex;
-    justify-content: space-between;
-}
-
-.my-projects-botton > div {
-    flex: 1;
-    margin: 10px;
-}
-
-.projects img {
-    width: 98%; /* Ajuste l'image pour qu'elle remplisse toute la largeur de la colonne */
-    height: auto; /* Conserve les proportions de l'image */
-}
-
-
-/* ********************** Section Youtube ************************ */
-
-.my-projects-top{
     background: #1a1a1a
-}
-
-.h2_projects{
-    margin: 0px;
-    padding-top: 20px;
-}
-
-.h3_projects{
-    padding-bottom: 20px;
-    margin-bottom: 0;
-}
-
-.hr_projects_top, .hr_carousel{
-    margin-left: 114px;
-}
-.youtube img {
-    transform: rotate(11deg);
-}
-
-.my-projects-botton {
-    display: flex;
 }
 
 /* **************** Section Guiartech **************** */
@@ -450,12 +346,11 @@ body {
 
 .guiartech-rectangle {
     position: absolute;
-    width: 598px;
+    width: 50%;
     height: 60px;
-    flex-shrink: 0;
     background: rgba(218, 218, 218, 0.11);
     top: 60px;
-    right: 602px; /* Inverser la position de la gauche à la droite */
+    left: 0;
     z-index: 20;
 }
 
@@ -522,12 +417,12 @@ body {
 
 .youtube-rectangle {
     position: absolute;
-    width: 598px;
+    width: 50%;
     height: 60px;
     flex-shrink: 0;
     background: rgba(218, 218, 218, 0.11);
     top: 60px;
-    left: 602px;
+    right: 0;
     z-index: 20;
 }
 
@@ -538,7 +433,7 @@ body {
     background: #df843953;
     border-radius: 90px;
     top: 30px;
-    left: 988px;
+    right: 30px;
     z-index: 10;
 }
 
@@ -561,6 +456,10 @@ body {
 }
 
 /* ************************* Section Volunteering ************************ */
+
+.hr_volunteering{
+    margin-left: 10%;
+}
 
 .volunteering {
     display: flex;
