@@ -12,6 +12,13 @@ body {
     overflow-x: hidden;  /* Empêche le défilement horizontal */
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;  /* Définit la largeur maximale */
+    margin: 0 auto;  /* Centre le conteneur horizontalement */
+    background-color: #050202;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,14 +27,6 @@ body {
     padding-left: 0;
     background: #000;
 }
-
-.container {
-    width: 100%;
-    max-width: 1200px;  /* Définit la largeur maximale */
-    margin: 0 auto;  /* Centre le conteneur horizontalement */
-    background-color: #050202;
-}
-
 
 .nav_link {
     color: #ff9900;

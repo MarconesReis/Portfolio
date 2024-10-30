@@ -5,19 +5,22 @@ body {
     color: #fff;
     background-color: #111103de;
     overflow-x: hidden;
-    /* Empêche le défilement horizontal */
 }
 
-h1,
-h2 {
-    color: #ff9900;
+.container {
+    width: 100%;
+    height: 927px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #050202;
 }
 
-h1 {
+.title_h1 {
     font-size: 3.5rem;
     margin-top: -17px;
     margin-bottom: 45px;
     margin-left: 20px;
+    color: #ff9900;
 }
 
 .contact p {
@@ -29,13 +32,11 @@ h1 {
     width: 100%;
     height: 927px;
     max-width: 1200px;
-    /* Définit la largeur maximale */
     margin: 0 auto;
-    /* Centre le conteneur horizontalement */
     background-color: #050202;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,6 +45,10 @@ header {
     background: #000;
 }
 
+.nav_link {
+    color: #ff9900;
+
+}
 .logo .logo-icon {
     background: #ff9900;
     color: #fff;
@@ -53,17 +58,27 @@ header {
     font-weight: bold;
 }
 
-nav ul {
+.nav_list {
     list-style: none;
     display: flex;
     gap: 3.5rem;
     margin-right: 74px;
 }
 
-nav ul li a {
-    color: #fff;
+.nav_link {
     text-decoration: none;
     font-size: 1rem;
+    font-weight: bold; 
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease; 
+}
+
+.nav_link:hover{
+    border-color: #ff9900;;
+    border-radius: 5px;
+    color: #fff;
 }
 
 .contact {
