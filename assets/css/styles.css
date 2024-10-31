@@ -311,16 +311,19 @@ body {
 
 .guiartech {
     display: flex;
-    justify-content: space-between;
+    align-items: center; /* Pour centrer verticalement */
     height: 600px;
     background-color: #030303;
-    background-image: url(/assets/images/projects/Ordinateur-guiartech.png);
-    background-size: 54%;
-    background-repeat: no-repeat;
-    background-position: 83% 63%;
     position: relative;
-    z-index: 1;
 }
+
+.guiartech img {
+    position: absolute;
+    width: 54%;
+    bottom: -2%; 
+    right: 10%;
+}
+
 
 .guiartech-text {
     width: 40%;
