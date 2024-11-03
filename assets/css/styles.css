@@ -256,6 +256,21 @@ body {
     line-height: 152%; /* 30.4px */
 }
 
+.presentation_guiartech{
+    position: absolute;
+    z-index: 20;
+    top: 20%;
+    z-index: 20;
+}
+
+.survol_guiartech{
+    position: absolute;
+    height: 200%;
+    width: auto;
+    z-index: 20;
+    
+}
+
 .conviction-vertical-rectangle {
     position: absolute;
     bottom: 34px;
@@ -357,6 +372,46 @@ body {
     height: 98px;
     background: rgba(218, 218, 218, 0.11);
 }
+
+
+/* Zone de text  */
+
+/* Conteneur de la présentation */
+/* Conteneur de la présentation */
+.presentation_guiartech {
+    height: 56%;
+    width: 55%;
+    overflow: hidden;
+    position: absolute;
+    opacity: 1;
+    right: 10px;
+    border: 2px solid #ff9900;
+    border-radius: 30px;
+}
+
+.presentation_guiartech:hover{
+    opacity: 1;
+}
+
+/* Style des images dans le carrousel */
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+
+
+
+/* Zone de text  */
 
 /* ********************* Section Youtube ********************* */
 

@@ -72,3 +72,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     scrollCarouselFooter(); // Démarre le défilement des réseaux sociaux
 });
+
+// Guiartech
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".carousel-image");
+    let currentIndex = 0;
+    let intervalId;
+
+    // Fonction pour changer d'image
+    function showNextImage() {
+        images[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add("active");
+    }
+
+    // Démarrer le carrousel en boucle
+    function startCarousel() {
+        intervalId = setInterval(showNextImage, 1800); // Change toutes les secondes
+    }
+
+    // Arrêter le carrousel
+    function stopCarousel() {
+        clearInterval(intervalId);
+    }
+
+    // Activer le carrousel au survol
+    const carouselContainer = document.getElementById("carousel-container");
+    carouselContainer.addEventListener("mouseenter", startCarousel);
+    carouselContainer.addEventListener("mouseleave", stopCarousel);
+});
+
