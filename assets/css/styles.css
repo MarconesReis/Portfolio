@@ -211,7 +211,6 @@ body {
     background-repeat: no-repeat;
     background-position: 6% 53%;
     position: relative;
-    z-index: 1;
 }
 
 .conviction-rectangle {
@@ -236,28 +235,23 @@ body {
     z-index: 10;
 }
 
-.conviction_h2{
-    margin-top: 71px;
+.conviction_h2, .h2_guiartech, .h2_youtube, .h2_volunteering{
+    margin-top: 72px;
+    text-align: center;
 }
 
-.conviction-text {
-    width: 40%;
-    padding-left: 30px;
-    padding-right: 30px;
+.volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
+    width: 45%;
 }
 
 .paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering{
+    color: #fff;
     display: flex;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
     height: 75%;
     padding: 0% 12%;
-}
-
-.conviction-text p {
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
     font-weight: 400;
     line-height: 152%; /* 30.4px */
 }
@@ -311,35 +305,14 @@ body {
 
 .guiartech {
     display: flex;
-    align-items: center; /* Pour centrer verticalement */
+    justify-content: space-between;
     height: 600px;
     background-color: #030303;
+    background-image: url(/assets/images/projects/Guiartech_eyes.png);
+    background-size: 53%;
+    background-repeat: no-repeat;
+    background-position: 82% 40%;
     position: relative;
-}
-
-.guiartech img {
-    position: absolute;
-    width: 54%;
-    bottom: -2%; 
-    right: 10%;
-}
-
-
-.guiartech-text {
-    width: 40%;
-}
-
-.h2_guiartech{
-    margin-top: 71px;
-    text-align: right; 
-}
-
-.guiartech-text p {
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 152%; /* 30.4px */
 }
 
 .guiartech_icon{
@@ -397,24 +370,6 @@ body {
     background-repeat: no-repeat;
     background-position: -27% 59%;
     position: relative;
-    z-index: 1;
-}
-
-.youtube-text {
-   width: 45%;
-}
-
-.h2_youtube{
-    margin-top: 72px;
-}
-
-.youtube-text p {
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 152%; 
-    padding: 30px;
 }
 
 .youtube-rectangle {
@@ -473,25 +428,6 @@ body {
     background-repeat: no-repeat;
     background-position: 79% 59%;
     position: relative;
-    z-index: 1;
-}
-
-.volunteering-text {
-    width: 45%;
-}
-
-.h2_volunteering{
-    margin-top: 72px;
-    margin-left: 52%;
-}
-
-.volunteering-text p {
-    color: #fff;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 152%; /* 30.4px */
-    padding: 30px;
 }
 
 .volunteering-rectangle {
