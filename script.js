@@ -90,3 +90,40 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextImage, 1800); // Change d'image toutes les 1,8 secondes
 });
 
+// Youtube
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imagesYoutube = document.querySelectorAll(".carousel-youtube");
+    let currentIndexYt = 0;
+
+    // Fonction pour changer d'image
+    function showNextImage() {
+        imagesYoutube[currentIndexYt].classList.remove("active");
+        currentIndexYt = (currentIndexYt + 1) % imagesYoutube.length;
+        imagesYoutube[currentIndexYt].classList.add("active");
+    }
+
+    // Démarrer le carrousel en boucle
+    setInterval(showNextImage, 1800); // Change d'image toutes les 1,8 secondes
+});
+
+// Volunteering
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imagesVolunteering = document.querySelectorAll(".carousel-volunteering");
+    let currentIndexVl = 0;
+
+    // Fonction pour changer d'image
+    function showNextImage() {
+        imagesVolunteering[currentIndexVl].classList.remove("active");
+        currentIndexVl = (currentIndexVl + 1) % imagesVolunteering.length;
+        imagesVolunteering[currentIndexVl].classList.add("active");
+    }
+
+    // Démarrer le carrousel en boucle
+    setInterval(showNextImage, 1800); // Change d'image toutes les 1,8 secondes
+});
+
+
+
+

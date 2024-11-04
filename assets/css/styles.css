@@ -17,6 +17,8 @@ body {
     max-width: 1200px;  /* Définit la largeur maximale */
     margin: 0 auto;  /* Centre le conteneur horizontalement */
     background-color: #050202;
+    position: relative;
+    height: auto;
 }
 
 .header {
@@ -316,7 +318,6 @@ body {
     justify-content: space-between;
     height: 600px;
     background-color: #030303;
-   
     position: relative;
 }
 
@@ -363,13 +364,8 @@ body {
     background: rgba(218, 218, 218, 0.11);
 }
 
-
-/* Zone de text  */
-
-/* Conteneur de la présentation */
-/* Conteneur de la présentation */
 .presentation_guiartech {
-    top: 20%;
+    top: 10%;
     z-index: 20;
     opacity: 1;
     background-image: url(/assets/images/Portfolio/Laptop_incliné_black.png);
@@ -377,11 +373,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.presentation_guiartech:hover{
-    opacity: 1;
-}
-
-/* Style des images dans le carrousel */
 .carousel-image {
     position: absolute;
     top: 0;
@@ -397,7 +388,7 @@ body {
 }
 
 #carousel-container {
-    width: 45%;
+    width: 44%;
     height: 65%;
     position: absolute;
     right: 8%;
@@ -407,24 +398,47 @@ body {
 }
 
 
-
-
-
-
-/* Zone de text  */
-
 /* ********************* Section Youtube ********************* */
 
 .youtube {
     display: flex;
     justify-content: space-between;
     height: 600px;
-    background-color: #030303;
-    background-image: url(/assets/images/projects/Portable-youtube.png);
-    background-size: 78%;
-    background-repeat: no-repeat;
-    background-position: -27% 59%;
     position: relative;
+}
+
+.presentation_youtube {
+    top: 15%;
+    z-index: 90;
+    opacity: 1;
+    background-image: url(/assets/images/projects/Phone_Black.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.carousel-youtube{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 90;
+}
+
+.carousel-youtube.active{
+    opacity: 1;
+}
+
+#carousel_container_youtube {
+    width: 30%;
+    height: 65%;
+    position: absolute;
+    right: 47%;
+    transform-origin: center;
+    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
+    overflow: hidden;
 }
 
 .youtube-rectangle {
@@ -477,12 +491,40 @@ body {
     display: flex;
     justify-content: space-between;
     height: 600px;
-    background-color: #030303;
-    background-image: url(/assets/images/projects/Tablette-volunteering.png);
-    background-size: 48%;
-    background-repeat: no-repeat;
-    background-position: 79% 59%;
     position: relative;
+}
+
+.presentation_volunteering {
+    top: 15%;
+    z-index: 20;
+    opacity: 1;
+    background-image: url(/assets/images/projects/Environnement-Black.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.carousel-volunteering{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-volunteering.active{
+    opacity: 1;
+}
+
+#carousel_container_volunteering {
+    width: 38%;
+    height: 65%;
+    position: absolute;
+    right: 11%;
+    transform-origin: center;
+    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
+    overflow: hidden;
 }
 
 .volunteering-rectangle {
@@ -493,7 +535,7 @@ body {
     background: rgba(218, 218, 218, 0.11);
     top: 60px;
     left: 0px;
-    z-index: 20;
+    z-index: 2;
 }
 
 .volunteering-ellipse {
@@ -582,12 +624,6 @@ body {
     margin: 35px 0 20px;
 }
 
-/* Icône de retour en haut */
-.back-to-top {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 20px;
-    right: 130px;
-    z-index: 1000;  /* Assurez que l'icône reste toujours visible */
-}
+
+
+
