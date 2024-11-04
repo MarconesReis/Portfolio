@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Premier carrousel : défilement de droite à gauche
     const carousel = document.querySelector('.carousel');
-    const clone1 = carousel.cloneNode(true); // Clone le contenu du carrousel
-    carousel.appendChild(clone1); // Ajoute le clone pour un effet de défilement continu
+    const clone1 = carousel.cloneNode(true); 
+    carousel.appendChild(clone1); 
 
     let scrollAmount1 = 0;
     const speed1 = 1;
@@ -10,17 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
     function scrollCarousel1() {
         scrollAmount1 -= speed1;
 
-        // Réinitialiser la position de défilement pour éviter les coupures
+       
         if (Math.abs(scrollAmount1) >= carousel.scrollWidth / 2) {
             scrollAmount1 = 0;
         }
 
-        // Appliquer le décalage de défilement
+        
         carousel.style.transform = `translateX(${scrollAmount1}px)`;
-        requestAnimationFrame(scrollCarousel1); // Appeler de manière continue
+        requestAnimationFrame(scrollCarousel1); 
     }
 
-    scrollCarousel1(); // Démarrer le défilement du premier carrousel
+    scrollCarousel1(); 
 
     // Deuxième carrousel : défilement de gauche à droite
     const carouselConviction = document.querySelector('.second_carousel');
@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".carousel-image");
     let currentIndex = 0;
-    let intervalId;
 
     // Fonction pour changer d'image
     function showNextImage() {
@@ -88,18 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Démarrer le carrousel en boucle
-    function startCarousel() {
-        intervalId = setInterval(showNextImage, 1800); // Change toutes les secondes
-    }
-
-    // Arrêter le carrousel
-    function stopCarousel() {
-        clearInterval(intervalId);
-    }
-
-    // Activer le carrousel au survol
-    const carouselContainer = document.getElementById("carousel-container");
-    carouselContainer.addEventListener("mouseenter", startCarousel);
-    carouselContainer.addEventListener("mouseleave", stopCarousel);
+    setInterval(showNextImage, 1800); // Change d'image toutes les 1,8 secondes
 });
 

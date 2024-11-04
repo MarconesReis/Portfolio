@@ -256,13 +256,6 @@ body {
     line-height: 152%; /* 30.4px */
 }
 
-.presentation_guiartech{
-    position: absolute;
-    z-index: 20;
-    top: 20%;
-    z-index: 20;
-}
-
 .survol_guiartech{
     position: absolute;
     height: 200%;
@@ -323,10 +316,7 @@ body {
     justify-content: space-between;
     height: 600px;
     background-color: #030303;
-    background-image: url(/assets/images/projects/Guiartech_eyes.png);
-    background-size: 53%;
-    background-repeat: no-repeat;
-    background-position: 82% 40%;
+   
     position: relative;
 }
 
@@ -379,14 +369,12 @@ body {
 /* Conteneur de la présentation */
 /* Conteneur de la présentation */
 .presentation_guiartech {
-    height: 56%;
-    width: 55%;
-    overflow: hidden;
-    position: absolute;
+    top: 20%;
+    z-index: 20;
     opacity: 1;
-    right: 10px;
-    border: 2px solid #ff9900;
-    border-radius: 30px;
+    background-image: url(/assets/images/Portfolio/Laptop_incliné_black.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .presentation_guiartech:hover{
@@ -407,6 +395,18 @@ body {
 .carousel-image.active {
     opacity: 1;
 }
+
+#carousel-container {
+    width: 45%;
+    height: 65%;
+    position: absolute;
+    right: 8%;
+    transform-origin: center;
+    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
+    overflow: hidden;
+}
+
+
 
 
 
