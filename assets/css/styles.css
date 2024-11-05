@@ -144,8 +144,8 @@ body {
     position: absolute;
     background: #ff9900;
     color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
+    border: 2px solid #ff9900;
+    padding: 0.55rem 1.5rem;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 21px;
@@ -155,10 +155,53 @@ body {
     transition: display 0.5s ease;
 }
 
+.btn-contact-footer {
+    background: #ff9900;
+    color: #fff;
+    border: 2px solid #ff9900;
+    margin: auto;
+    padding: 0.55rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    z-index: 30;
+    transition: display 0.5s ease;
+}
+
 /* Rend l'image visible */
 .button-contact:hover + .contact_marcones{
     opacity: 1;
 }
+
+.btn-contact-footer:hover, .button-contact:hover{
+    background: #111103de;   
+    color: #fff;
+    border: 2px solid #ff9900;
+}
+
+.button-visit {
+    position: absolute;
+    background: #111103de;   
+    color: #fff;
+    border: 2px solid #ff9900; /* Bordure transparente par défaut */
+    padding: 0.55rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    bottom: 28px;
+    margin-left: 57px;
+    z-index: 30;
+    box-sizing: border-box; /* Garde tout à l'intérieur des limites */
+    transition: background 0.5s ease, border-color 0.5s ease;
+}
+
+/* Effet de survol */
+.button-visit:hover {
+    background: #ff9900;
+    color: #000;
+    border-color: #111103de; /* Change uniquement la couleur de la bordure */
+}
+
 /* ***************************** Carousel ********************************* */
 
 .carousel_title{
@@ -622,6 +665,7 @@ body {
 .copyright{
     text-align: center;
     margin: 35px 0 20px;
+    color: #ff9900;
 }
 
 
