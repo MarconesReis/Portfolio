@@ -34,7 +34,7 @@ body {
     color: #ff9900;
 
 }
-.logo .logo-icon {
+.logo-icon {
     background: #ff9900;
     color: #fff;
     margin-top: -37px;
@@ -150,7 +150,7 @@ body {
     cursor: pointer;
     border-radius: 21px;
     bottom: 39px;
-    right: 237px;
+    right: 85%;
     z-index: 30;
     transition: display 0.5s ease;
 }
@@ -351,7 +351,8 @@ body {
 
 .my-projects-top {
     text-align: center;
-    background: #1a1a1a
+    background: #1a1a1a;
+    height: 95px;
 }
 
 /* **************** Section Guiartech **************** */
@@ -665,9 +666,44 @@ body {
 .copyright{
     text-align: center;
     margin: 35px 0 20px;
-    color: #ff9900;
+    color: #fff;
 }
 
+
+/* Tablettes et petits écrans */
+@media (max-width: 992px) {
+    .header, .hero, .conviction, .guiartech, .youtube, .volunteering {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .hero, .conviction, .guiartech, .youtube, .volunteering {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .hero-text, .conviction-text, .guiartech-text, .youtube-text, .volunteering-text {
+        max-width: 80%;
+    }
+
+    .hero-vertical-rectangle, .conviction-rectangle, .guiartech-rectangle, .youtube-rectangle, .volunteering-rectangle {
+        width: 80%;
+        height: 40px;
+    }
+    
+    .button-contact, .button-visit, .btn-contact-footer {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav_list {
+        gap: 1.5rem;
+    }
+    
+    .carousel img, .second_carousel img {
+        height: 50px;
+    }
+}
 
 
 

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -48,6 +48,11 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.logo{
+    text-decoration: none;
+    color: #fff;
 }
 
 .nav_list {
