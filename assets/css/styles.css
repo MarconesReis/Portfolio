@@ -66,6 +66,34 @@ body {
     color: #fff;
 }
 
+.main_nav {
+    display: flex;
+}
+
+/* Styles pour le menu hamburger */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Assure-toi qu'il reste en haut à droite */
+    top: 20px; /* Ajuste selon le besoin */
+    right: 20px; /* Ajuste selon le besoin */
+    z-index: 1001; /* S'assure qu'il soit au-dessus du menu */
+}
+
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #ff9900;
+    transition: transform 0.3s;
+}
+
+
 .hero {
     height: 560px;
     position: relative;  /* Nécessaire pour positionner les rectangles à l'intérieur */
@@ -771,18 +799,57 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero, .conviction, .guiartech, .youtube, .volunteering {
-        display: bloc;
+    
+
+    .nav_list.active {
+        transform: translateX(0); /* Fait glisser le menu dans le cadre */
     }
-  }
+
+    .nav_item {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav_link {
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight:400;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #ff9900;
+        transition: transform 0.3s;
+    }
+}
+
+
 
   @media (max-width: 320px) {
     .hero, .conviction, .guiartech, .youtube, .volunteering {
-        height: 600px;
+       display: block;
         width: 100%;
     }
 
     .volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
+        display: flex;
         width: 100%;
     }
 
@@ -791,5 +858,55 @@ body {
         font-size: 12px;
         font-weight: 400;
     }
+
+    .conviction {
+        width: 100%;
+        display: block;
+        justify-content: space-between;
+        background-color: #030303;
+        background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-position: 6% 53%;
+        position: relative;
+    }
+
+    .title_h1, .title_h2{
+        font-size: 20px;
+    }
+
+    .header{
+        padding-top: 37px;
+    }
+    .nav_list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 0;
+        top: 42px;
+        right: 0;
+        background: rgba(218, 218, 218, 0.11);
+        border-left: 3px solid #ff9900;
+        padding: 0;
+        margin: 0;
+        width: 106px; /* Ajuste la largeur selon tes besoins */
+        transform: translateX(100%); /* Positionne le menu hors de l'écran */
+        transition: transform 0.3s ease; /* Transition pour l'animation */
+        z-index: 1000;
+    }
+
+    .hero-text {
+        width: 59%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+        .span_nav {
+        top: 10px;
+       width: 80px;
+        font-size: 20px;
+    }
+    
+    
   }
   
