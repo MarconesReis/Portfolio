@@ -1,5 +1,4 @@
 <?php
-echo '<pre>'; print_r($_POST); echo '</pre>';
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
@@ -37,7 +36,9 @@ if ($_POST) {
     }
 
     if(!isset($error)){
-        $messagValidation = '<p class="valid">forumaire valide</p>';
+        $messagValidation = '<p class="msgSend">Merci ! <br> <br> Votre message a bien été envoyé et je reviendrai vers vous dans les plus brefs délais.</p>';
+
+        
 
         // envoi mail<?php
         //Import PHPMailer classes into the global namespace
@@ -49,12 +50,12 @@ if ($_POST) {
 
         try {
             //Server settings
-            $mail->SMTPDebug = 2;                      //Enable verbose debug output
+            $mail->SMTPDebug = 0;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'contact@marconesportfolio.com';                     //SMTP username
-            $mail->Password   = 'Presente2024!';                               //SMTP password
+            $mail->Password   = 'Portfolio24@';                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -77,9 +78,9 @@ if ($_POST) {
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            echo 'Message has been sent';
+            
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            
         }
     }
 }

@@ -177,12 +177,19 @@ body {
 }
 
 .error {
-    color: #FF9900;
+    color: #d63d0f;
     font-size: 12px;
     margin-top: 0;
     padding-top: 5px;
     padding-bottom: 10px;
     padding-left: 5px;
+}
+
+.msgSend{
+    font-weight: lighter;
+    color: #75e87f;
+    font-size: 12px;
+    margin: 80px;
 }
 
 label{

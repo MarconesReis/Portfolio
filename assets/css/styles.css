@@ -189,7 +189,7 @@ body {
     cursor: pointer;
     border-radius: 21px;
     bottom: 28px;
-    margin-left: 87px;
+    margin-left: 34%;
     z-index: 30;
     box-sizing: border-box; /* Garde tout à l'intérieur des limites */
     transition: background 0.5s ease, border-color 0.5s ease;
@@ -202,6 +202,17 @@ body {
     border-color: #111103de; /* Change uniquement la couleur de la bordure */
 }
 
+
+#btn_youtube {
+    margin-left: 4.5%; 
+}
+
+/* Effet de survol */
+#btn_youtube:hover {
+    background: #ff9900;
+    color: #000;
+    border-color: #111103de; /* Change uniquement la couleur de la bordure */
+}
 /* ***************************** Carousel ********************************* */
 
 .carousel_title{
@@ -470,8 +481,8 @@ body {
 }
 
 #carousel_container_youtube {
-    width: 30%;
-    height: 67%;
+    width: 28%;
+    height: 72%;
     position: absolute;
     right: 47%;
     transform-origin: center;
@@ -551,7 +562,7 @@ body {
 }
 
 #carousel_container_volunteering {
-    width: 37%;
+    width: 35%;
     height: 76%;
     position: absolute;
     right: 11%;
@@ -660,7 +671,7 @@ body {
 
 
 /* Tablettes et petits écrans */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .header, .hero, .conviction, .guiartech, .youtube, .volunteering {
         display: flex;
         flex-direction: row;
@@ -669,6 +680,7 @@ body {
     .hero-text{
         width: 59%;
         margin-left: 0;
+        margin-top: -40px;
     }
 
     .span_nav{
@@ -721,8 +733,8 @@ body {
     #carousel-container {
         width: 35%;
         height: 65%;
-        right: 8%;
-        top: 21%;   
+        right: 12%;
+        top: 14%;
     }
 
     #carousel_container_youtube {
@@ -743,4 +755,41 @@ body {
         padding: 0;
     }
 
+    .button-visit {
+     padding: 0.55rem 1.5rem;
+        font-size: 1rem;   
+        margin-left: 34%;   
+    }
+    
+    /* Effet de survol */
+    .button-visit:hover {
+        background: #ff9900;
+        color: #000;
+        border-color: #111103de; /* Change uniquement la couleur de la bordure */
+    }
+
 }
+
+@media (max-width: 768px) {
+    .hero, .conviction, .guiartech, .youtube, .volunteering {
+        display: bloc;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .hero, .conviction, .guiartech, .youtube, .volunteering {
+        height: 600px;
+        width: 100%;
+    }
+
+    .volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
+        width: 100%;
+    }
+
+    .paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering{
+        color: #ffffffb0;
+        font-size: 12px;
+        font-weight: 400;
+    }
+  }
+  
