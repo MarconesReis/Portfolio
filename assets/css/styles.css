@@ -150,7 +150,7 @@ body {
     cursor: pointer;
     border-radius: 21px;
     bottom: 39px;
-    right: 85%;
+    right: 100%;
     z-index: 30;
     transition: display 0.5s ease;
 }
@@ -189,7 +189,7 @@ body {
     cursor: pointer;
     border-radius: 21px;
     bottom: 28px;
-    margin-left: 57px;
+    margin-left: 87px;
     z-index: 30;
     box-sizing: border-box; /* Garde tout à l'intérieur des limites */
     transition: background 0.5s ease, border-color 0.5s ease;
@@ -355,15 +355,17 @@ body {
     height: 95px;
 }
 
-/* **************** Section Guiartech **************** */
+/* sections globales */
 
-.guiartech {
+.guiartech, .youtube, .volunteering {
     display: flex;
     justify-content: space-between;
-    height: 600px;
+    height: 500px;
     background-color: #030303;
     position: relative;
 }
+
+/* **************** Section Guiartech **************** */
 
 .guiartech_icon{
     height: 120px;
@@ -409,7 +411,7 @@ body {
 }
 
 .presentation_guiartech {
-    top: 10%;
+    top: 13%;
     z-index: 20;
     opacity: 1;
     background-image: url(/assets/images/Portfolio/Laptop_incliné_black.png);
@@ -433,23 +435,15 @@ body {
 
 #carousel-container {
     width: 44%;
-    height: 65%;
+    height: 78%;
     position: absolute;
-    right: 8%;
+    right: 11%;
     transform-origin: center;
     transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    overflow: hidden;
 }
 
 
 /* ********************* Section Youtube ********************* */
-
-.youtube {
-    display: flex;
-    justify-content: space-between;
-    height: 600px;
-    position: relative;
-}
 
 .presentation_youtube {
     top: 15%;
@@ -477,12 +471,12 @@ body {
 
 #carousel_container_youtube {
     width: 30%;
-    height: 65%;
+    height: 67%;
     position: absolute;
     right: 47%;
     transform-origin: center;
     transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    overflow: hidden;
+    
 }
 
 .youtube-rectangle {
@@ -531,12 +525,7 @@ body {
     margin-left: 10%;
 }
 
-.volunteering {
-    display: flex;
-    justify-content: space-between;
-    height: 600px;
-    position: relative;
-}
+
 
 .presentation_volunteering {
     top: 15%;
@@ -562,13 +551,13 @@ body {
 }
 
 #carousel_container_volunteering {
-    width: 38%;
-    height: 65%;
+    width: 37%;
+    height: 76%;
     position: absolute;
     right: 11%;
     transform-origin: center;
     transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    overflow: hidden;
+    
 }
 
 .volunteering-rectangle {
@@ -676,9 +665,34 @@ body {
         display: flex;
         flex-direction: row;
     }
+
+    .hero-text{
+        width: 59%;
+        margin-left: 0;
+    }
+
+    .span_nav{
+        font-size: 2.5rem;
+    }
+
+    .title_h1{
+        font-size: 1.5rem;
+    }
+
+    .title_h2{
+        margin-top: 51px;
+    }
+
+    #portfolio{
+        margin-bottom: -10px;
+    }
+
+    .carousel_title{
+        margin-top: 20px;
+    }
     
     .hero, .conviction, .guiartech, .youtube, .volunteering {
-        height: auto;
+        height: 350px;
         padding: 20px;
     }
     
@@ -687,8 +701,8 @@ body {
     }
 
     .hero-vertical-rectangle, .conviction-rectangle, .guiartech-rectangle, .youtube-rectangle, .volunteering-rectangle {
-        width: 80%;
-        height: 40px;
+        width: 50%;
+        height: 60px;
     }
     
     .button-contact, .button-visit, .btn-contact-footer {
@@ -703,7 +717,30 @@ body {
     .carousel img, .second_carousel img {
         height: 50px;
     }
+
+    #carousel-container {
+        width: 35%;
+        height: 65%;
+        right: 8%;
+        top: 21%;   
+    }
+
+    #carousel_container_youtube {
+        width: 25%;
+        height: 70%;
+        right: 53%;
+    }
+
+    #carousel_container_volunteering {
+        width: 32%;
+        height: 70%;
+        right: 17%;
+        
+    }
+
+    .hero_paragraph, .paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering {
+        font-size: 15px;
+        padding: 0;
+    }
+
 }
-
-
-

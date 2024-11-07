@@ -5,7 +5,6 @@ body {
     color: #fff;
     background-color: #111103de;
     overflow-x: hidden;
-    /* Empêche le défilement horizontal */
 }
 
 .title_h1 {
@@ -21,10 +20,11 @@ body {
 }
 
 .container {
-
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #050202;
+    position: relative;
 }
 
 .header {
@@ -80,11 +80,13 @@ body {
 
 .about {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #030303;
     background-image: url(/assets/images/backgrounds/About-background.png);
     background-size: 92%;
     background-repeat: no-repeat;
-    background-position: 251% -74%;
+    background-position: 251% 4%;
     position: relative;
     z-index: 1;
     padding-left: 30px;
@@ -173,4 +175,35 @@ body {
 .copyright {
     text-align: center;
     margin: 35px 0 20px;
+}
+
+@media (max-width: 768px) {
+    .logo-icon {
+        margin-top: -16px;
+    }
+
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #030303;
+        background-image: url(/assets/images/backgrounds/About-background.png);
+        background-size: 198%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        padding-left: 30px;
+    }
+
+    .nav_list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin: 0; 
+    }
+
+    .paragraph{
+        margin-top: 60%;
+    }
 }
