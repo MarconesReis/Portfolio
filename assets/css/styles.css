@@ -842,8 +842,8 @@ body {
 
   @media (max-width: 320px) {
     .header{
-        padding-top: 37px;
-        background-color: green;
+        padding: 37px 0 0 0;
+        border-bottom: 2px solid #fff;
     }
 
     .hero, .conviction, .guiartech, .youtube, .volunteering {
@@ -856,21 +856,51 @@ body {
         width: 100%;
     }
 
+    .hero  {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: url(/assets/images/backgrounds/Accueil-background.png) no-repeat center center;
+        background-size: 144%;
+        background-position: 100% 15%;
+        background-color: #000;
+        transition: background 0.5s ease-in;
+    }
+
+    .hero:hover{
+        background: url('/assets/images/backgrounds/Contact-background.png') no-repeat center center; /* Ajouter l'image de fond */
+        background-size: 134%;
+        background-position: 75% 19%;
+    }
+
+    .span_nav {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
     .hero-text {
         width: 100%;
         margin: 0;
         padding: 0;
-        margin-top: 20px;
-        background: green;
+        margin-top: 8px;
     }
 
     .logo-icon {
-        background: #ff9900;
-        color: #fff;
-        margin-top: -37px;
         padding: 0.1rem 0.7rem;
-        font-size: 1.5rem;
-        font-weight: bold;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1001;
     }
 
     .volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
@@ -922,18 +952,7 @@ body {
         transition: transform 0.3s ease; /* Transition pour l'animation */
         z-index: 1000;
     }
-
-    .hero-text {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        margin-top: 20px;
-        background: green;
-    }
-
-        .span_nav {
-        font-size: 20px;
-    }
+      
     
     .conviction-geometric-shapes, .guiartech-ellipse, .guiartech-vertical-rectangle{
         display: none;
