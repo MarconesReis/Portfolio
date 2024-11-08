@@ -733,7 +733,7 @@ body {
     
     .hero, .conviction, .guiartech, .youtube, .volunteering {
         height: 350px;
-        padding: 20px;
+        padding: 10px;
     }
     
     .hero-text, .conviction-text, .guiartech-text, .youtube-text, .volunteering-text {
@@ -840,17 +840,44 @@ body {
     }
 }
 
-
-
   @media (max-width: 320px) {
+    .header{
+        padding-top: 37px;
+        background-color: green;
+    }
+
     .hero, .conviction, .guiartech, .youtube, .volunteering {
-       display: block;
+        padding: 5px;
+        width: auto;
+        height: auto;
+    }
+
+    .volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
         width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        background: green;
+    }
+
+    .logo-icon {
+        background: #ff9900;
+        color: #fff;
+        margin-top: -37px;
+        padding: 0.1rem 0.7rem;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     .volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
         display: flex;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering{
@@ -875,9 +902,10 @@ body {
         font-size: 20px;
     }
 
-    .header{
-        padding-top: 37px;
+    .title_h1{
+        margin-top: 150px;
     }
+
     .nav_list {
         display: flex;
         flex-direction: column;
@@ -896,17 +924,20 @@ body {
     }
 
     .hero-text {
-        width: 59%;
-        margin-left: 0;
-        margin-top: 10px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        background: green;
     }
 
         .span_nav {
-        top: 10px;
-       width: 80px;
         font-size: 20px;
     }
     
+    .conviction-geometric-shapes, .guiartech-ellipse, .guiartech-vertical-rectangle{
+        display: none;
+    }
     
   }
   

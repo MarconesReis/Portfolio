@@ -38,6 +38,8 @@ if ($_POST) {
     if(!isset($error)){
         $messagValidation = '<p class="msgSend">Merci ! <br> <br> Votre message a bien été envoyé et je reviendrai vers vous dans les plus brefs délais.</p>';
 
+    $name = $_POST['first-name'] . ' ' .  $_POST['last-name'];
+    $message = $_POST['subject'] . ' : <br><br>' . $_POST['message'];
         
 
         // envoi mail<?php
@@ -61,7 +63,7 @@ if ($_POST) {
 
             //Recipients
             $mail->setFrom('contact@marconesportfolio.com', 'Contact portfolio');
-            $mail->addAddress('contact@marconesportfolio.com', 'Joe User');     //Add a recipient
+            $mail->addAddress('contact@marconesportfolio.com', $_POST['first-name'] . ' ' .  $_POST['last-name']);     //Add a recipient
             // $mail->addAddress('ellen@example.com');               //Name is optional
             $mail->addReplyTo($_POST["email"], 'Information');
             // $mail->addCC('cc@example.com');
@@ -74,7 +76,8 @@ if ($_POST) {
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = $_POST['subject'];
-            $mail->Body    = $_POST['message'];
+            $mail->Body    = $message;
+            $mail->CharSet = "UTF-8";
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();

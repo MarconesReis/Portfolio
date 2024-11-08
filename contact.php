@@ -43,7 +43,7 @@ require_once("mail.php");
             <div class="contact-form-container">
 
                 <?php if(isset($messagValidation)) echo $messagValidation ?>
-                <form action="contact.php" method="POST" class="contact-form">
+                <form action="contact.php" method="POST" class="contact-form" id="contact-form">
                     <div class="form-group">
                         <label class="label" for="last-name">Nom</label>
                         <input type="text" id="last-name" name="last-name" placeholder="Votre Nom">
@@ -71,7 +71,10 @@ require_once("mail.php");
                         <textarea id="message" name="message" rows="6" placeholder="Votre Message"></textarea>
                         <?php if(isset($errorMessage)) echo $errorMessage ?>
                     </div>
-                    <button type="submit" class="btn-submit">Envoyer</button>
+                    <button type="submit" class="btn-submit"  class="g-recaptcha" 
+                    data-sitekey="6Lf_yHgqAAAAMNpDn2HSnROXjopjyLcr7L4iJWd" 
+                    data-callback='onSubmit' 
+                    data-action='submit'>Envoyer</button>
                 </form>
             </div>
             
@@ -125,6 +128,12 @@ require_once("mail.php");
             </div>
         </footer>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
+    <script>
+   function onSubmit(token) {
+     document.getElementById("contact-form").submit();
+   }
+ </script>
 </body>
 </html>
