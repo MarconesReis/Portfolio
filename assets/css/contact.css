@@ -31,22 +31,63 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
     padding-left: 0;
-    background: #000;
 }
 
 .nav_link {
     color: #ff9900;
-
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold; 
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease; 
 }
+
+.nav_link:hover{
+    border-color: #ff9900;;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.main_nav {
+    display: flex;
+}
+
+/* Styles pour le menu hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Assure-toi qu'il reste en haut à droite */
+    top: 20px; /* Ajuste selon le besoin */
+    right: 20px; /* Ajuste selon le besoin */
+    z-index: 1001; /* S'assure qu'il soit au-dessus du menu */
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #ff9900;
+    transition: transform 0.3s;
+}
+
 .logo-icon {
     background: #ff9900;
     color: #fff;
-    margin-top: -37px;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 0.7rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.portfolio{
+    font-size: 12px;
+    color: #030303;
 }
 
 .logo{
@@ -223,13 +264,14 @@ label{
 .send {
     position: relative;
     background-color: #1a1a1a;
-    height: 115px;
+    height: 82px;
     text-align: center;
 }
 
 .title_h3_footer {
     color: #fff;
     text-align: center;
+    padding-top: 30px;
 }
 
 .paragraph_footer{
@@ -237,6 +279,7 @@ label{
 }
 
 .footer-content {
+    margin-top: 25px;
     width: 100%;
     overflow: hidden;
     background-color: #030303;
@@ -263,4 +306,243 @@ label{
 .copyright{
     text-align: center;
     margin: 35px 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .header, .hero, .conviction, .guiartech, .youtube, .volunteering {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero-text{
+        width: 59%;
+        margin-left: 0;
+        margin-top: -40px;
+    }
+
+    .span_nav{
+        font-size: 2.5rem;
+    }
+
+    .title_h1{
+        font-size: 1.5rem;
+    }
+
+    .title_h2{
+        margin-top: 51px;
+    }
+
+    #portfolio{
+        margin-bottom: -10px;
+    }
+
+    .carousel_title{
+        margin-top: 20px;
+    }
+    
+    .hero, .conviction, .guiartech, .youtube, .volunteering {
+        height: 350px;
+        padding: 10px;
+    }
+    
+    .hero-text, .conviction-text, .guiartech-text, .youtube-text, .volunteering-text {
+        max-width: 80%;
+    }
+
+    .hero-vertical-rectangle, .conviction-rectangle, .guiartech-rectangle, .youtube-rectangle, .volunteering-rectangle {
+        width: 50%;
+        height: 60px;
+    }
+    
+    .button-contact, .button-visit, .btn-contact-footer {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav_list {
+        gap: 1.5rem;
+    }
+    
+    .carousel img, .second_carousel img {
+        height: 50px;
+    }
+
+    #carousel-container {
+        width: 35%;
+        height: 65%;
+        right: 12%;
+        top: 14%;
+    }
+
+    #carousel_container_youtube {
+        width: 25%;
+        height: 70%;
+        right: 53%;
+    }
+
+    #carousel_container_volunteering {
+        width: 32%;
+        height: 70%;
+        right: 17%;
+        
+    }
+
+    .hero_paragraph, .paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering {
+        font-size: 15px;
+        padding: 0;
+        width: auto;
+    }
+
+    .button-visit {
+     padding: 0.55rem 1.5rem;
+        font-size: 1rem;   
+        margin-left: 34%;   
+    }
+    
+    /* Effet de survol */
+    .button-visit:hover {
+        background: #ff9900;
+        color: #000;
+        border-color: #111103de; /* Change uniquement la couleur de la bordure */
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+
+    .nav_list.active {
+        transform: translateX(0); /* Fait glisser le menu dans le cadre */
+    }
+
+    .nav_item {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav_link {
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight:400;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #ff9900;
+        transition: transform 0.3s;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #030303;
+        background-image: url(/assets/images/backgrounds/Contact-background.png);
+        background-size: 115%;
+        background-repeat: no-repeat;
+        background-position: 66% 6%;
+        position: relative;
+        z-index: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .contact-form-container {   
+        width: auto;
+        background-color: #1A1A1A;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 0;
+        background: #000;
+    }
+
+    .logo-icon {
+        padding: 0.1rem 0.7rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .nav_list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 0;
+        top: 38px;
+        right: 0;
+        background: rgba(33, 31, 31, 0.555);  
+        border-top: 3px solid #ff9900;
+        border-bottom: 3px solid #ff9900;
+        padding: 0;
+        margin: 0;
+        width: 106px; /* Ajuste la largeur selon tes besoins */
+        transform: translateX(100%); /* Positionne le menu hors de l'écran */
+        transition: transform 0.3s ease; /* Transition pour l'animation */
+        z-index: 1000;
+    }
+
+    .nav_list.active {
+        transform: translateX(0); /* Fait glisser le menu dans le cadre */
+    }
+
+    .title_h1 {
+        font-size: 20px;
+        margin-top: 17px;
+        margin-left: 20px;
+    }
+
+    .contact p {
+        font-size: 15px;
+        margin-top: 170px;
+        line-height: 0.9;
+    }
+
+    .social-media img{
+        height: 30px;
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
 }

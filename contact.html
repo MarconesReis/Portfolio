@@ -1,14 +1,18 @@
+<?php
+require_once("mail.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Marcones</title>
-    <link rel="stylesheet" href="assets/css/about.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <title>Contact - Marcones</title>
 </head>
 
 <body>
@@ -32,38 +36,62 @@
             </nav>
         </header>
 
-        <section class="about">
-            <div class="about-text">
-                <h1 class="title_h1">À propos</h1>
-                <p class="paragraph">Je m'appelle Marcones, originaire du Brésil, où j'ai travaillé <br> comme menuisier, 
-                    dont les deux dernières années en tant <br> qu'autoentrepreneur. <br><br> 
-                    Résidant en France depuis 2017, j'ai exploré les métiers de <br>la soudure 
-                     et du machinisme avant 
-                    de me lancer dans ma <br> passion pour la technologie. 
-                    <br> <br> Cela m'a conduit à étudier la programmation en autodidacte depuis 2022 
-                    <br>et à rejoindre une formation de développeur web à l'AFPA de Chartres en 2024.
-
-                    <br> En 2023, j'ai lancé la chaîne YouTube Marcontech pour partager mon intérêt 
-                    <br>pour la programmation et les technologies émergentes. 
-                    
-                    <br> <br>En 2024, j'ai créé Guiartech, un site web offrant des cours en ligne, des articles détaillés, et 
-                    des ressources <br> téléchargeables pour accompagner les passionnés de technologie.
-                    
+        <section class="contact">
+            <div class="contact-text">
+                <h1 class="title_h1">Contactez-moi</h1>
+                <p class="paragraph">Vous avez des questions, des propositions ou  souhaitez simplement dire bonjour ?
+                    <br><br> Remplissez le formulaire ci-dessous et je vous répondrai au plus vite.
                 </p>
             </div>
+            <div class="contact-form-container">
 
-            <div class="about-geometric-shapes">
-                <div class="about-horizontal-rectangle"></div>
-                <div class="about-vertical-rectangle"></div>
+                <?php if(isset($messagValidation)) echo $messagValidation ?>
+                <form action="contact.php" method="POST" class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label class="label" for="last-name">Nom</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Votre Nom">
+                        <?php if(isset($errorLastName)) echo $errorLastName ?>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="first-name">Prénom</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Votre Prénom" >
+                        <?php if(isset($errorFirstName)) echo $errorFirstName ?>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Votre Email" >
+                        <?php if(isset($errorEmail)) echo $errorEmail ?>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="subject">Objet</label>
+                        <input type="text" id="subject" name="subject" placeholder="Objet de votre message" >
+                        <?php if(isset($errorObjet)) echo $errorObjet ?>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Votre Message"></textarea>
+                        <?php if(isset($errorMessage)) echo $errorMessage ?>
+                    </div>
+                    <button type="submit" class="btn-submit"  class="g-recaptcha" 
+                    data-sitekey="6Lf_yHgqAAAAMNpDn2HSnROXjopjyLcr7L4iJWd" 
+                    data-callback='onSubmit' 
+                    data-action='submit'>Envoyer</button>
+                </form>
+            </div>
+            
+            <div class="contact-geometric-shapes">
+                <div class="contact-horizontal-rectangle"></div>
+                <div class="contact-vertical-rectangle"></div>
             </div>
         </section>
 
-        <section class="follow-me">
-            <h3 class="title_h3_follow">Suivez-moi</h3>
+        <section class="send">
+            <h3 class="title_h3_footer">Suivez-moi</h3>
         </section>
-
         <footer class="footer">
-           
+            
             <div class="footer-content">
                 <div class="social-media">
                    
@@ -97,13 +125,18 @@
                     </a>
                     
                 </div>
-               
                 <div class="footer-copyright">
-                    <p class="copyright">Copyright &copy; 2024 Marcones Reis</p>
+                    <p class="copyright">Copyright &copy; 2024 MarconesReis</p>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
+    <script>
+   function onSubmit(token) {
+     document.getElementById("contact-form").submit();
+   }
+ </script>
 </body>
 </html>

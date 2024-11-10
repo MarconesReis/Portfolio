@@ -26,13 +26,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
-    background: #000;
 }
 
-.nav_link {
-    color: #ff9900;
-
-}
 .logo-icon {
     background: #ff9900;
     color: #fff;
@@ -86,7 +81,6 @@ body {
     right: 20px; /* Ajuste selon le besoin */
     z-index: 1001; /* S'assure qu'il soit au-dessus du menu */
 }
-
 
 .hamburger span {
     display: block;
@@ -1106,6 +1100,10 @@ body {
         width: 58%;
         height: 46%;
         right: 17%;
+    }
+
+    .copyright{
+        font-size: 12px;
     }
     
   }
