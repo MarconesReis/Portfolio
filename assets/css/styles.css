@@ -849,11 +849,25 @@ body {
         padding: 7px 0 0 0;
     }
 
-    .hero, .conviction, .guiartech, .youtube, .volunteering {
+    .hero, .conviction, .guiartech {
         display: flex;
         padding: 5px;
         width: 100%;
         height: 500px;
+    }
+
+    .youtube{
+        display: flex;
+        padding: 5px;
+        width: 100%;
+        height: 550px;
+    }
+
+    .volunteering{
+        display: flex;
+        padding: 5px;
+        width: 100%;
+        height: 550px;
     }
 
     .hero {
@@ -946,10 +960,17 @@ body {
         z-index: 1001;
     }
 
-    .volunteering-text,  .guiartech-text, .youtube-text, .conviction-text{
+    .volunteering-text,  .guiartech-text, .conviction-text{
         display: flex;
         width: 100%;
         padding: 0;
+        flex-direction: column;
+    }
+
+    .youtube-text{
+        display: flex;
+        width: 78%;
+        padding-right: 15px;
         flex-direction: column;
     }
 
@@ -957,20 +978,28 @@ body {
         margin-left: -70px;
     }
 
+    .paragraph_conviction{
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 220px;
+        margin-left: -60px;
+        margin-right: 0px;
+    }
+
      .paragraph_guiartech, .paragraph_voluteering{
         font-size: 14px;
         font-weight: 400;
-        margin-top: 155px;
+        margin-top: 210px;
         margin-left: 10px;
         margin-right: -15px;
     }
 
-    .paragraph_conviction, .paragraph_youtube{
+    .paragraph_youtube{
         font-size: 14px;
         font-weight: 400;
-        margin-top: 190px;
-        margin-left: -60px;
-        margin-right: 0px;
+        margin-top: 250px;
+        margin-left: -50px;
+
     }
 
     .nav_list {
@@ -991,7 +1020,7 @@ body {
         z-index: 1000;
     }
       
-    .conviction-horizontal-rectangle, .conviction-vertical-rectangle, .hero-vertical-rectangle,  .guiartech-vertical-rectangle, .youtube-vertical-rectangle, .youtube-horizontal-rectangle{
+     .conviction-vertical-rectangle, .conviction-ellipse, .hero-vertical-rectangle,  .guiartech-vertical-rectangle, .youtube-vertical-rectangle {
         display: none;
     }
 
@@ -1038,13 +1067,6 @@ body {
         z-index: 3000;
     }
 
-    #carousel-container {
-        width: 63%;
-        height: 64%;
-        right: 21%;
-        top: 20%;
-    }
-
     .conviction_h2{
         position: absolute;
         margin-top: 22px;
@@ -1060,11 +1082,30 @@ body {
         font-size: 1rem;
         cursor: pointer;
         border-radius: 21px;
-        bottom: -20px;
+        bottom: -30px;
         margin-left: 34%;
         z-index: 30;
         box-sizing: border-box;
         transition: background 0.5s ease, border-color 0.5s ease;
+    }
+
+    #carousel-container {
+        width: 68%;
+        height: 64%;
+        right: 19%;
+        top: 20%;
+    }
+
+    #carousel_container_youtube {
+        width: 58%;
+        height: 49%;
+        right: 27%;
+    }
+
+    #carousel_container_volunteering {
+        width: 58%;
+        height: 46%;
+        right: 17%;
     }
     
   }
