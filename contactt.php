@@ -17,20 +17,23 @@ require_once("mail.php");
 
 <body>
     <div class="container">
-        <header class="header">            
-                <div class="logo-icon">
-                    <a class="logo" href="index.html">MR</a>
-                </div>            
-            <nav class="main_nav">
-                <ul class="nav_list">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">MR<samp class="portfolio">Portfolio</samp></div>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main_nav ">
+                <ul class="nav_list active">
                     <li class="nav_item"><a class="nav_link" href="index.html">Accueil</a></li>
                     <li class="nav_item"><a class="nav_link" href="about.html">À propos</a></li>
                     <li class="nav_item"><a class="nav_link" href="index.html#portfolio">Portfolio</a></li>
-
                     <li class="nav_item"><a class="nav_link" href="contact.php">Contact</a></li>
                 </ul>
             </nav>
-
         </header>
 
         <section class="contact">
@@ -85,10 +88,10 @@ require_once("mail.php");
         </section>
 
         <section class="send">
-            
+            <h3 class="title_h3_footer">Suivez-moi</h3>
         </section>
         <footer class="footer">
-            <h3 class="title_h3_footer">Suivez-moi</h3>
+            
             <div class="footer-content">
                 <div class="social-media">
                    
