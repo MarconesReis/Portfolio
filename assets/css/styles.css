@@ -334,7 +334,7 @@ body {
     height: 75%;
     padding: 0% 12%;
     font-weight: 400;
-    line-height: 152%; 
+    line-height: 152%; /* 30.4px */
 }
 
 .survol_guiartech{
@@ -705,7 +705,7 @@ body {
     .hero-text{
         width: 59%;
         margin-left: 0;
-        margin-top: 100px;
+        margin-top: -40px;
     }
 
     .span_nav{
@@ -758,7 +758,7 @@ body {
     #carousel-container {
         width: 35%;
         height: 65%;
-        right: 10%;
+        right: 12%;
         top: 14%;
     }
 
@@ -794,9 +794,10 @@ body {
         border-color: #111103de; /* Change uniquement la couleur de la bordure */
     }
 
-    
-
 }
+
+
+
 
 @media (min-width: 414px) and (max-width: 678px) {
     .header{
@@ -1042,7 +1043,6 @@ body {
         border: none;
         cursor: pointer;
         position: absolute;
-        top: 10px;
         right: 20px;
         z-index: 1001;
     }
@@ -1226,23 +1226,6 @@ body {
 @media (min-width: 320px) and (max-width: 414px) {
     .header{
         padding: 7px 0 0 0;
-    }
-
-    .nav_list.active {
-        transform: translateX(0); /* Fait glisser le menu dans le cadre */
-    }
-
-    .nav_item {
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    .nav_link {
-        color: #fff;
-        font-size: 1rem;
-        text-decoration: none;
-        font-weight:400;
     }
 
     .hero, .conviction, .guiartech {
@@ -1494,7 +1477,7 @@ body {
 
     #carousel_container_youtube {
         width: 58%;
-        height: 68%;
+        height: 49%;
         right: 27%;
     }
 
