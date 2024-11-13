@@ -126,15 +126,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Buton Hamburguer 
 
-// Sélectionne le bouton hamburger et la liste de navigation
-const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav_list');
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navList = document.querySelector(".nav_list");
 
-// Ajoute un écouteur d'événement au clic sur le bouton hamburger
-hamburger.addEventListener('click', () => {
-    console.log("Bouton cliqué !");
-    navList.classList.toggle('active'); // Active/désactive la classe 'active' pour afficher le menu
+    hamburger.addEventListener("click", function () {
+        navList.classList.toggle("active");
+    });
 });
+
 
 
 
