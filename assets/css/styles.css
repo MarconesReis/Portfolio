@@ -1,1495 +1,1332 @@
-a{
-    text-decoration: none;
-    color: #ff9900;
-}
-
-body {
-    font-family: "Ubuntu", sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-color: #111103de;
-    overflow-x: hidden;  /* Empêche le défilement horizontal */
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;  /* Définit la largeur maximale */
-    margin: 0 auto;  /* Centre le conteneur horizontalement */
-    background-color: #050202;
-    position: relative;
-    height: auto;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0;
-}
-
-.logo-icon {
-    background: #ff9900;
-    color: #fff;
-    padding: 0.1rem 0.7rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.portfolio{
-    font-size: 12px;
-    color: #030303;
-}
-
-.nav_list {
-    list-style: none;
-    display: flex;
-    gap: 3.5rem;
-    margin-right: 74px;
-}
-
-.nav_link {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold; 
-    padding: 5px 10px 5px 10px;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    transition: border 0.3s ease; 
-}
-
-.nav_link:hover{
-    border-color: #ff9900;;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.main_nav {
-    display: flex;
-}
-
-/* Styles pour le menu hamburger */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 0.3rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute; /* Assure-toi qu'il reste en haut à droite */
-    top: 20px; /* Ajuste selon le besoin */
-    right: 20px; /* Ajuste selon le besoin */
-    z-index: 1001; /* S'assure qu'il soit au-dessus du menu */
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #ff9900;
-    transition: transform 0.3s;
-}
-
+@import url(optimized.css);
 
 .hero {
-    height: 560px;
-    position: relative;  /* Nécessaire pour positionner les rectangles à l'intérieur */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: url('/assets/images/backgrounds/Accueil-background.png') no-repeat center center; /* Ajouter l'image de fond */
-    background-size: 75%; /* Redimensionner l'image pour qu'elle soit entièrement visible */
-    background-position: center right; /* Positionner l'image plus à droite */
-    background-color: #000;
-    transition: background 0.5s ease-in;
+  height: 560px;
+  position: relative; /* Nécessaire pour positionner les rectangles à l'intérieur */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("/assets/images/backgrounds/Accueil-background.png") no-repeat
+    center center; /* Ajouter l'image de fond */
+  background-size: 75%; /* Redimensionner l'image pour qu'elle soit entièrement visible */
+  background-position: center right; /* Positionner l'image plus à droite */
+  background-color: #000;
+  transition: background 0.5s ease-in;
 }
 
-.hero:hover{
-    background: url('/assets/images/backgrounds/Contact-background.png') no-repeat center center; /* Ajouter l'image de fond */
-    background-size: 72%; /* Redimensionner l'image pour qu'elle soit entièrement visible */
-    background-position: center right; /* Positionner l'image plus à droite */
+.hero:hover {
+  background: url("/assets/images/backgrounds/Contact-background.png") no-repeat
+    center center; /* Ajouter l'image de fond */
+  background-size: 72%; /* Redimensionner l'image pour qu'elle soit entièrement visible */
+  background-position: center right; /* Positionner l'image plus à droite */
 }
 
-.span_nav{
-    font-size: 3.5rem;
-    color: #fff;
-    margin-top: -12px;
-    font-weight: bold;
+.span_nav {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-top: -12px;
+  font-weight: bold;
 }
 
 .hero-text {
-    max-width: 50%;
-    margin-left: 30px;
-    position: relative; /* Assure que le texte est au-dessus de l'image de fond */
-    z-index: 2; /* Positionne le texte au-dessus de l'image de fond */
+  max-width: 50%;
+  margin-left: 30px;
+  position: relative; /* Assure que le texte est au-dessus de l'image de fond */
+  z-index: 2; /* Positionne le texte au-dessus de l'image de fond */
 }
 
-.title_h1, .title_h2 {
-    font-size: 2rem;
-    color: #ff9900;
+.title_h1,
+.title_h2 {
+  font-size: 2rem;
+  color: #ff9900;
 }
 
 .hero_paragraph {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    padding-right: 70px;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-right: 70px;
 }
 
 .hero-vertical-rectangle {
-    position: absolute;
-    width: 50%;
-    height: 60px;
-    background: rgba(218, 218, 218, 0.11);
-    bottom: 60px;
-    right: 0px;
-    z-index: 2;
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  background: rgba(218, 218, 218, 0.11);
+  bottom: 60px;
+  right: 0px;
+  z-index: 2;
 }
 
 .hero-ellipse {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: #df843953;
-    border-radius: 90px;
-    bottom: 30px;
-    right: 30px;
-    z-index: 10;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #df843953;
+  border-radius: 90px;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10;
 }
 
-.contact_marcones{
-    /* display: none; */
-    opacity: 0;
-    border-radius: 50%;
-    width: 180px;
-    transition: opacity 0.5s ease;
+.contact_marcones {
+  /* display: none; */
+  opacity: 0;
+  border-radius: 50%;
+  width: 180px;
+  transition: opacity 0.5s ease;
 }
 
 .button-contact {
-    position: absolute;
-    background: #ff9900;
-    color: #fff;
-    border: 2px solid #ff9900;
-    padding: 0.55rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 21px;
-    bottom: 39px;
-    right: 100%;
-    z-index: 30;
-    transition: display 0.5s ease;
+  position: absolute;
+  background: #ff9900;
+  color: #fff;
+  border: 2px solid #ff9900;
+  padding: 0.55rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 21px;
+  bottom: 39px;
+  right: 100%;
+  z-index: 30;
+  transition: display 0.5s ease;
 }
 
 .btn-contact-footer {
-    background: #ff9900;
-    color: #fff;
-    border: 2px solid #ff9900;
-    margin: auto;
-    padding: 0.55rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 21px;
-    z-index: 30;
-    transition: display 0.5s ease;
+  background: #ff9900;
+  color: #fff;
+  border: 2px solid #ff9900;
+  margin: auto;
+  padding: 0.55rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 21px;
+  z-index: 30;
+  transition: display 0.5s ease;
 }
 
 /* Rend l'image visible */
-.button-contact:hover + .contact_marcones{
-    opacity: 1;
+.button-contact:hover + .contact_marcones {
+  opacity: 1;
 }
 
-.btn-contact-footer:hover, .button-contact:hover{
-    background: #111103de;   
-    color: #fff;
-    border: 2px solid #ff9900;
+.btn-contact-footer:hover,
+.button-contact:hover {
+  background: #111103de;
+  color: #fff;
+  border: 2px solid #ff9900;
 }
 
 .button-visit {
-    position: absolute;
-    background: #111103de;   
-    color: #fff;
-    border: 2px solid #ff9900; /* Bordure transparente par défaut */
-    padding: 0.55rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 21px;
-    bottom: 28px;
-    margin-left: 34%;
-    z-index: 30;
-    box-sizing: border-box; /* Garde tout à l'intérieur des limites */
-    transition: background 0.5s ease, border-color 0.5s ease;
+  position: absolute;
+  background: #111103de;
+  color: #fff;
+  border: 2px solid #ff9900; /* Bordure transparente par défaut */
+  padding: 0.55rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 21px;
+  bottom: 28px;
+  margin-left: 34%;
+  z-index: 30;
+  box-sizing: border-box; /* Garde tout à l'intérieur des limites */
+  transition: background 0.5s ease, border-color 0.5s ease;
 }
 
 /* Effet de survol */
 .button-visit:hover {
-    background: #ff9900;
-    color: #000;
-    border-color: #111103de; /* Change uniquement la couleur de la bordure */
+  background: #ff9900;
+  color: #000;
+  border-color: #111103de; /* Change uniquement la couleur de la bordure */
 }
 
-
 #btn_youtube {
-    margin-left: 4.5%; 
+  margin-left: 4.5%;
 }
 
 /* Effet de survol */
 #btn_youtube:hover {
-    background: #ff9900;
-    color: #000;
-    border-color: #111103de; /* Change uniquement la couleur de la bordure */
+  background: #ff9900;
+  color: #000;
+  border-color: #111103de; /* Change uniquement la couleur de la bordure */
 }
 /* ***************************** Carousel ********************************* */
 
-.carousel_title{
-    text-align: center;
-    margin: 10px;
-    font-size: 22px;
+.carousel_title {
+  text-align: center;
+  margin: 10px;
+  font-size: 22px;
 }
 
 .carousel_logos {
-    width: 100%;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  position: relative;
 }
 
 .carousel {
-    display: flex;  
+  display: flex;
 }
 
 .carousel img {
-    width: auto;
-    height: 65px;
-    margin-bottom: 8px;
+  width: auto;
+  height: 65px;
+  margin-bottom: 8px;
 }
 /********************************* Carousel Conviction **********************************/
 
 .carousel_conviction {
-    width: 100%;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    position: relative;
-    padding: 20px 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  position: relative;
+  padding: 20px 0;
 }
 
 .second_carousel {
-    display: flex;
+  display: flex;
 }
 
 .second_carousel img {
-    height: 65px;
-    width: auto;
-    margin: 0; /* Assure qu'il n'y a pas de marge entre les images */
+  height: 65px;
+  width: auto;
+  margin: 0; /* Assure qu'il n'y a pas de marge entre les images */
 }
 /* ********************** Section Conviction **************************** */
 .conviction {
-    display: flex;
-    justify-content: space-between;
-    height: 600px;
-    background-color: #030303;
-    background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: 6% 53%;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 600px;
+  background-color: #030303;
+  background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: 6% 53%;
+  position: relative;
 }
 
 .conviction-rectangle {
-    position: absolute;
-    width: 50%;
-    height: 60px;
-    flex-shrink: 0;
-    background: rgba(218, 218, 218, 0.11);
-    top: 60px;
-    right: 0px;
-    z-index: 20;
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  flex-shrink: 0;
+  background: rgba(218, 218, 218, 0.11);
+  top: 60px;
+  right: 0px;
+  z-index: 20;
 }
 
 .conviction-ellipse {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: #df843953;
-    border-radius: 90px;
-    top: 30px;
-    right: 30px;
-    z-index: 10;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #df843953;
+  border-radius: 90px;
+  top: 30px;
+  right: 30px;
+  z-index: 10;
 }
 
-.conviction_h2, .h2_guiartech, .h2_youtube, .h2_volunteering{
-    margin-top: 72px;
-    text-align: center;
+.conviction_h2,
+.h2_guiartech,
+.h2_youtube,
+.h2_volunteering {
+  margin-top: 72px;
+  text-align: center;
 }
 
-.volunteering-text, .youtube-text, .guiartech-text, .conviction-text{
-    width: 45%;
+.volunteering-text,
+.youtube-text,
+.guiartech-text,
+.conviction-text {
+  width: 45%;
 }
 
-.paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering{
-    color: #fff;
-    display: flex;
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
-    height: 75%;
-    padding: 0% 12%;
-    font-weight: 400;
-    line-height: 152%; /* 30.4px */
+.paragraph_conviction,
+.paragraph_youtube,
+.paragraph_guiartech,
+.paragraph_voluteering {
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  padding: 0% 12%;
+  font-weight: 400;
+  line-height: 152%; /* 30.4px */
 }
 
-.survol_guiartech{
-    position: absolute;
-    height: 200%;
-    width: auto;
-    z-index: 20;
-    
+.survol_guiartech {
+  position: absolute;
+  height: 200%;
+  width: auto;
+  z-index: 20;
 }
 
 .conviction-vertical-rectangle {
-    position: absolute;
-    bottom: 34px;
-    left: 0px;
-    width: 110px;
-    height: 271px;
-    background: rgba(223, 133, 57, 0.20);
+  position: absolute;
+  bottom: 34px;
+  left: 0px;
+  width: 110px;
+  height: 271px;
+  background: rgba(223, 133, 57, 0.2);
 }
 
 .conviction-horizontal-rectangle {
-    position: absolute;
-    bottom: 34px;
-    left: 0;
-    width: 262px;
-    height: 98px;
-    background: rgba(218, 218, 218, 0.11);
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  width: 262px;
+  height: 98px;
+  background: rgba(218, 218, 218, 0.11);
 }
 
 .stats-conviction {
-    display: flex;
-    justify-content: space-around;
-    background-color: #1a1a1a;
-    padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  padding: 2rem 0;
 }
 
 .stats-conviction img {
-    width: 45px;
-    height: 45px;
+  width: 45px;
+  height: 45px;
 }
 
 /* ********************* Section My Projects *********************** */
 
 .hr_division {
-    width: 90%;
-    border: none;
-    margin: 0;
-    height: 2px;
-    background-color: #ff9900; /* Couleur de la ligne */
+  width: 90%;
+  border: none;
+  margin: 0;
+  height: 2px;
+  background-color: #ff9900; /* Couleur de la ligne */
 }
 
 .my-projects-top {
-    text-align: center;
-    background: #1a1a1a;
-    height: 95px;
+  text-align: center;
+  background: #1a1a1a;
+  height: 95px;
 }
 
 /* sections globales */
 
-.guiartech, .youtube, .volunteering {
-    display: flex;
-    justify-content: space-between;
-    height: 500px;
-    background-color: #030303;
-    position: relative;
+.guiartech,
+.youtube,
+.volunteering {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  background-color: #030303;
+  position: relative;
 }
 
 /* **************** Section Guiartech **************** */
 
-.guiartech_icon{
-    height: 120px;
+.guiartech_icon {
+  height: 120px;
 }
 
 .guiartech-rectangle {
-    position: absolute;
-    width: 50%;
-    height: 60px;
-    background: rgba(218, 218, 218, 0.11);
-    top: 60px;
-    left: 0;
-    z-index: 20;
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  background: rgba(218, 218, 218, 0.11);
+  top: 60px;
+  left: 0;
+  z-index: 20;
 }
 
 .guiartech-ellipse {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: #df843953;
-    border-radius: 90px;
-    top: 30px;
-    left: 30px; /* Inverser la position de la gauche à la droite */
-    z-index: 10;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #df843953;
+  border-radius: 90px;
+  top: 30px;
+  left: 30px; /* Inverser la position de la gauche à la droite */
+  z-index: 10;
 }
 
 .guiartech-vertical-rectangle {
-    position: absolute;
-    bottom: 34px;
-    right: 0px; 
-    width: 110px;
-    height: 271px;
-    background: rgba(223, 133, 57, 0.20);
+  position: absolute;
+  bottom: 34px;
+  right: 0px;
+  width: 110px;
+  height: 271px;
+  background: rgba(223, 133, 57, 0.2);
 }
 
 .guiartech-horizontal-rectangle {
-    position: absolute;
-    bottom: 34px;
-    right: 0; /* Inverser la position de la gauche à la droite */
-    width: 262px;
-    height: 98px;
-    background: rgba(218, 218, 218, 0.11);
+  position: absolute;
+  bottom: 34px;
+  right: 0; /* Inverser la position de la gauche à la droite */
+  width: 262px;
+  height: 98px;
+  background: rgba(218, 218, 218, 0.11);
 }
 
 .presentation_guiartech {
-    top: 13%;
+  top: 13%;
+  z-index: 20;
+  opacity: 1;
+  background-image: url(/assets/images/Portfolio/Laptop_incliné_black.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+#carousel-container {
+  width: 44%;
+  height: 78%;
+  position: absolute;
+  right: 11%;
+  transform-origin: center;
+  transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg)
+    scale(1.35);
+}
+
+/* ********************* Section Youtube ********************* */
+
+.presentation_youtube {
+  top: 15%;
+  z-index: 90;
+  opacity: 1;
+  background-image: url(/assets/images/projects/Phone_Black.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.carousel-youtube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 90;
+}
+
+.carousel-youtube.active {
+  opacity: 1;
+}
+
+#carousel_container_youtube {
+  width: 28%;
+  height: 72%;
+  position: absolute;
+  right: 47%;
+  transform-origin: center;
+  transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg)
+    scale(1.35);
+}
+
+.youtube-rectangle {
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  flex-shrink: 0;
+  background: rgba(218, 218, 218, 0.11);
+  top: 60px;
+  right: 0;
+  z-index: 20;
+}
+
+.youtube-ellipse {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #df843953;
+  border-radius: 90px;
+  top: 30px;
+  right: 30px;
+  z-index: 10;
+}
+
+.youtube-vertical-rectangle {
+  position: absolute;
+  bottom: 34px;
+  left: 0px;
+  width: 110px;
+  height: 271px;
+  background: rgba(223, 133, 57, 0.2);
+}
+
+.youtube-horizontal-rectangle {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  width: 262px;
+  height: 98px;
+  background: rgba(218, 218, 218, 0.11);
+}
+
+/* ************************* Section Volunteering ************************ */
+
+.hr_volunteering {
+  margin-left: 10%;
+}
+
+.presentation_volunteering {
+  top: 15%;
+  z-index: 20;
+  opacity: 1;
+  background-image: url(/assets/images/projects/Environnement-Black.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.carousel-volunteering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-volunteering.active {
+  opacity: 1;
+}
+
+#carousel_container_volunteering {
+  width: 35%;
+  height: 76%;
+  position: absolute;
+  right: 11%;
+  transform-origin: center;
+  transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg)
+    scale(1.35);
+}
+
+.volunteering-rectangle {
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  flex-shrink: 0;
+  background: rgba(218, 218, 218, 0.11);
+  top: 60px;
+  left: 0px;
+  z-index: 2;
+}
+
+.volunteering-ellipse {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #df843953;
+  border-radius: 90px;
+  top: 30px;
+  left: 30px;
+  z-index: 10;
+}
+
+.volunteering-vertical-rectangle {
+  position: absolute;
+  bottom: 34px;
+  right: 0px;
+  width: 110px;
+  height: 271px;
+  background: rgba(223, 133, 57, 0.2);
+}
+
+.volunteering-horizontal-rectangle {
+  position: absolute;
+  bottom: 34px;
+  right: 0;
+  width: 262px;
+  height: 98px;
+  background: rgba(218, 218, 218, 0.11);
+}
+
+.follow-me {
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.follow-me button {
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 3.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 21px;
+  margin: 0px;
+}
+
+@media (max-width: 1024px) {
+  .header,
+  .hero,
+  .conviction,
+  .guiartech,
+  .youtube,
+  .volunteering {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero-text {
+    width: 59%;
+    margin-left: 0;
+    margin-top: -40px;
+  }
+
+  .span_nav {
+    font-size: 2.5rem;
+  }
+
+  .title_h1 {
+    font-size: 1.5rem;
+  }
+
+  .title_h2 {
+    margin-top: 51px;
+  }
+
+  #portfolio {
+    margin-bottom: -10px;
+  }
+
+  .carousel_title {
+    margin-top: 20px;
+  }
+
+  .hero,
+  .conviction,
+  .guiartech,
+  .youtube,
+  .volunteering {
+    height: 350px;
+    padding: 10px;
+  }
+
+  .hero-text,
+  .conviction-text,
+  .guiartech-text,
+  .youtube-text,
+  .volunteering-text {
+    max-width: 80%;
+  }
+
+  .hero-vertical-rectangle,
+  .conviction-rectangle,
+  .guiartech-rectangle,
+  .youtube-rectangle,
+  .volunteering-rectangle {
+    width: 50%;
+    height: 60px;
+  }
+
+  .button-contact,
+  .button-visit,
+  .btn-contact-footer {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .carousel img,
+  .second_carousel img {
+    height: 50px;
+  }
+
+  #carousel-container {
+    width: 35%;
+    height: 65%;
+    right: 12%;
+    top: 14%;
+  }
+
+  #carousel_container_youtube {
+    width: 25%;
+    height: 70%;
+    right: 53%;
+  }
+
+  #carousel_container_volunteering {
+    width: 32%;
+    height: 70%;
+    right: 17%;
+  }
+
+  .hero_paragraph,
+  .paragraph_conviction,
+  .paragraph_youtube,
+  .paragraph_guiartech,
+  .paragraph_voluteering {
+    font-size: 15px;
+    padding: 0;
+    width: auto;
+  }
+
+  .button-visit {
+    padding: 0.55rem 1.5rem;
+    font-size: 1rem;
+    margin-left: 34%;
+  }
+
+  .button-visit:hover {
+    background: #ff9900;
+    color: #000;
+    border-color: #111103de; /* Change uniquement la couleur de la bordure */
+  }
+}
+
+@media (min-width: 414px) and (max-width: 678px) {
+  .hero,
+  .conviction,
+  .guiartech {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+  }
+
+  .conviction,
+  .guiartech {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+  }
+
+  /* conviction */
+
+  .conviction {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 10% 4%;
+    position: relative;
+    z-index: 3000;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conviction_h2 {
+    position: absolute;
+    top: 15px;
+  }
+
+  .conviction-text {
+    width: 100%;
+  }
+
+  .paragraph_conviction {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+
+  .conviction-rectangle {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(218, 218, 218, 0.11);
+    top: 60px;
+    right: 0px;
+    z-index: 20;
+  }
+
+  .conviction_h2,
+  .h2_guiartech,
+  .h2_youtube,
+  .h2_volunteering {
+    margin-top: 72px;
+    text-align: center;
+  }
+
+  .survol_guiartech {
+    position: absolute;
+    height: 200%;
+    width: auto;
+    z-index: 20;
+  }
+
+  .conviction-vertical-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0px;
+    width: 110px;
+    height: 271px;
+    background: rgba(223, 133, 57, 0.2);
+  }
+
+  .conviction-horizontal-rectangle {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+  }
+
+  .stats-conviction {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+  }
+
+  .stats-conviction img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* conviction */
+
+  .youtube {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 550px;
+  }
+
+  .volunteering {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 550px;
+  }
+
+  .hero {
+    width: auto;
+    display: flex;
+    background: url(/assets/images/backgrounds/Accueil-background.png) no-repeat
+      center center;
+    background-size: 144%;
+    background-position: 100% 15%;
+    transition: background 0.5s ease-in;
+    flex-direction: column;
+  }
+
+  .hero:hover {
+    background: url("/assets/images/backgrounds/Contact-background.png")
+      no-repeat center center; /* Ajouter l'image de fond */
+    background-size: 134%;
+    background-position: 75% 19%;
+  }
+
+  .contact_marcones {
+    display: none;
+  }
+
+  .span_nav {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .hero-text {
+    height: 520px;
+    width: auto;
+    margin-top: 8px;
+  }
+
+  .hero-ellipse {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #df843929;
+    bottom: 0;
+    margin-right: 34%;
+    z-index: 10;
+  }
+
+  .title_h1 {
+    margin-top: 215px;
+    font-size: 18px;
+  }
+
+  .title_h1,
+  .title_h2 {
+    font-size: 18px;
+  }
+
+  .carousel img,
+  .carousel_conviction img,
+  .social-media img {
+    height: 30px;
+  }
+
+  .title_h2 {
+    margin-top: 7px;
+  }
+
+  .button-contact {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    border-color: #ff9900;
+    padding: 0.55rem 2.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    margin: -15px -130px;
+    z-index: 30;
+    transition: display 0.5s ease;
+  }
+
+  .hero_paragraph,
+  .title_h1 {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .logo-icon {
+    padding: 0.1rem 0.7rem;
+  }
+
+  .h3_projects {
+    font-size: 14px;
+  }
+
+  /* Guiartech */
+
+  .guiartech {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 320px;
+  }
+
+  #carousel-container {
+    width: 38%;
+    height: 53%;
+  }
+
+  .presentation_guiartech {
+    top: 19%;
     z-index: 20;
     opacity: 1;
     background-image: url(/assets/images/Portfolio/Laptop_incliné_black.png);
     background-size: 100%;
     background-repeat: no-repeat;
-}
+    height: 200px;
+  }
 
-.carousel-image {
+  .h2_guiartech {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
+    margin-left: 10%;
+    margin-top: 20px;
+  }
 
-.carousel-image.active {
-    opacity: 1;
-}
+  .paragraph_guiartech {
+    margin-top: 70px;
+    font-size: 14px;
+    line-height: 135%;
+  }
 
-#carousel-container {
-    width: 44%;
-    height: 78%;
+  .guiartech-rectangle,
+  .conviction-rectangle,
+  .youtube-rectangle,
+  .volunteering-rectangle {
+    height: 30px;
+    margin-top: -40px;
+  }
+
+  .hero-vertical-rectangle,
+  .conviction-ellipse,
+  .guiartech-ellipse,
+  .volunteering-ellipse {
+    display: none;
+  }
+
+  .conviction-ellipse,
+  .youtube-ellipse {
+    height: 90px;
+    width: 90px;
+    margin-top: -20px;
+  }
+
+  .guiartech-horizontal-rectangle {
     position: absolute;
-    right: 11%;
-    transform-origin: center;
-    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-}
-
-
-/* ********************* Section Youtube ********************* */
-
-.presentation_youtube {
-    top: 15%;
-    z-index: 90;
-    opacity: 1;
-    background-image: url(/assets/images/projects/Phone_Black.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.carousel-youtube{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: 90;
-}
-
-.carousel-youtube.active{
-    opacity: 1;
-}
-
-#carousel_container_youtube {
-    width: 28%;
-    height: 72%;
-    position: absolute;
-    right: 47%;
-    transform-origin: center;
-    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    
-}
-
-.youtube-rectangle {
-    position: absolute;
-    width: 50%;
-    height: 60px;
-    flex-shrink: 0;
-    background: rgba(218, 218, 218, 0.11);
-    top: 60px;
+    bottom: 10px;
     right: 0;
-    z-index: 20;
-}
-
-.youtube-ellipse {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: #df843953;
-    border-radius: 90px;
-    top: 30px;
-    right: 30px;
-    z-index: 10;
-}
-
-.youtube-vertical-rectangle {
-    position: absolute;
-    bottom: 34px;
-    left: 0px;
-    width: 110px;
-    height: 271px;
-    background: rgba(223, 133, 57, 0.20);
-}
-
-.youtube-horizontal-rectangle {
-    position: absolute;
-    bottom: 34px;
-    left: 0;
     width: 262px;
     height: 98px;
     background: rgba(218, 218, 218, 0.11);
-}
+  }
 
-/* ************************* Section Volunteering ************************ */
-
-.hr_volunteering{
-    margin-left: 10%;
-}
-
-
-
-.presentation_volunteering {
-    top: 15%;
-    z-index: 20;
-    opacity: 1;
-    background-image: url(/assets/images/projects/Environnement-Black.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.carousel-volunteering{
+  .button-visit {
     position: absolute;
-    top: 0;
-    left: 0;
+    background: #111103de;
+    color: #fff;
+    border: 2px solid #ff9900;
+    padding: 0.55rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    bottom: 0px;
+    margin-left: 34%;
+    z-index: 30;
+    box-sizing: border-box;
+    transition: background 0.5s ease, border-color 0.5s ease;
+  }
+
+  .button-visit {
+    position: absolute;
+    background: #111103de;
+    color: #fff;
+    border: 2px solid #ff9900;
+    padding: 0.55rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    bottom: 0px;
+    margin-left: 34%;
+    z-index: 30;
+    box-sizing: border-box;
+    transition: background 0.5s ease, border-color 0.5s ease;
+  }
+
+  /* youtube */
+
+  .youtube {
+    display: flex;
+    padding: 5px;
     width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
+    height: 350px;
+  }
 
-.carousel-volunteering.active{
-    opacity: 1;
-}
+  .paragraph_youtube {
+    margin-top: 50px;
+    padding-right: 12px;
+    font-size: 14px;
+  }
 
-#carousel_container_volunteering {
-    width: 35%;
+  .youtube-horizontal-rectangle {
+    bottom: 10px;
+  }
+
+  .youtube-ellipse {
+    display: none;
+  }
+
+  #carousel_container_youtube {
+    width: 32%;
+    height: 72%;
+    position: absolute;
+    right: 57%;
+    transform-origin: center;
+    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg)
+      scale(1.35);
+  }
+
+  /* voluteering */
+
+  .volunteering {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 320px;
+  }
+
+  .volunteering-horizontal-rectangle {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 262px;
+    height: 98px;
+    background: rgba(218, 218, 218, 0.11);
+  }
+
+  .paragraph_voluteering {
+    margin-top: 70px;
+    font-size: 14px;
+    line-height: 135%;
+  }
+
+  .h2_volunteering {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 20px;
+  }
+
+  #carousel_container_volunteering {
+    width: 36%;
     height: 76%;
     position: absolute;
     right: 11%;
     transform-origin: center;
-    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    
+    transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg)
+      scale(1.35);
+  }
+
+  .conviction-vertical-rectangle,
+  .volunteering-vertical-rectangle,
+  .youtube-vertical-rectangle,
+  .guiartech-vertical-rectangle {
+    width: 60px;
+  }
 }
 
-.volunteering-rectangle {
-    position: absolute;
-    width: 600px;
-    height: 60px;
-    flex-shrink: 0;
-    background: rgba(218, 218, 218, 0.11);
-    top: 60px;
-    left: 0px;
-    z-index: 2;
-}
+@media (min-width: 320px) and (max-width: 414px) {
+  .hero,
+  .conviction,
+  .guiartech {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+  }
 
-.volunteering-ellipse {
+  .youtube {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 550px;
+  }
+
+  .volunteering {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 550px;
+  }
+
+  .hero {
+    width: auto;
+    display: flex;
+    background: url(/assets/images/backgrounds/Accueil-background.png) no-repeat
+      center center;
+    background-size: 144%;
+    background-position: 100% 15%;
+    transition: background 0.5s ease-in;
+    flex-direction: column;
+  }
+
+  .hero:hover {
+    background: url("/assets/images/backgrounds/Contact-background.png")
+      no-repeat center center; /* Ajouter l'image de fond */
+    background-size: 134%;
+    background-position: 75% 19%;
+  }
+
+  .span_nav {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .hero-text {
+    height: 520px;
+    width: auto;
+    margin-top: 8px;
+  }
+
+  .hero-ellipse {
     position: absolute;
-    width: 180px;
-    height: 180px;
-    background: #df843953;
-    border-radius: 90px;
-    top: 30px;
-    left: 30px;
+    width: 90px;
+    height: 90px;
+    background: #df843929;
+    bottom: 0;
+    margin-right: 34%;
     z-index: 10;
-}
+  }
 
-.volunteering-vertical-rectangle {
+  .title_h1 {
+    margin-top: 215px;
+    font-size: 18px;
+  }
+
+  .title_h1,
+  .title_h2 {
+    font-size: 13px;
+  }
+
+  .carousel img,
+  .carousel_conviction img,
+  .social-media img {
+    height: 30px;
+  }
+
+  .title_h2 {
+    margin-top: 22px;
+  }
+
+  .button-contact {
     position: absolute;
-    bottom: 34px;
-    right: 0px;
-    width: 110px;
-    height: 271px;
-    background: rgba(223, 133, 57, 0.20);
-}
-
-.volunteering-horizontal-rectangle {
-    position: absolute;
-    bottom: 34px;
-    right: 0;
-    width: 262px;
-    height: 98px;
-    background: rgba(218, 218, 218, 0.11);
-}
-
-.follow-me {
-    background-color: #1a1a1a;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.follow-me button {
-    background: #ff9900;
+    background: #000;
     color: #fff;
-    border: none;
-    padding: 0.75rem 3.5rem;
+    border-color: #ff9900;
+    padding: 0.55rem 2.5rem;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 21px;
-    margin: 0px;
-}
+    margin: -15px -130px;
+    z-index: 30;
+    transition: display 0.5s ease;
+  }
 
-/* ********************* Footer ********************** */
+  .hero_paragraph,
+  .title_h1 {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 
-.title_h3_footer {
-    color: #fff;
-    text-align: center;
-}
+  .logo-icon {
+    padding: 0.1rem 0.7rem;
+  }
 
-.paragraph_footer{
-    color: #fff;
-}
+  .volunteering-text,
+  .guiartech-text,
+  .conviction-text {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
 
-.footer-content {
+  .youtube-text {
+    display: flex;
+    width: 78%;
+    padding-right: 15px;
+    flex-direction: column;
+  }
+
+  .youtube-text,
+  .conviction-text {
+    margin-left: -70px;
+  }
+
+  .paragraph_conviction {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 220px;
+    margin-left: -60px;
+    margin-right: 0px;
+  }
+
+  .paragraph_guiartech,
+  .paragraph_voluteering {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 210px;
+    margin-left: 10px;
+    margin-right: -15px;
+  }
+
+  .paragraph_youtube {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 250px;
+    margin-left: -50px;
+  }
+
+  .conviction-vertical-rectangle,
+  .conviction-ellipse,
+  .hero-vertical-rectangle,
+  .guiartech-vertical-rectangle,
+  .youtube-vertical-rectangle {
+    display: none;
+  }
+
+  .carousel_logos {
     width: 100%;
     overflow: hidden;
-    background-color: #030303;
+    background-color: #1a1a1a;
     position: relative;
-}
-
-.social-media {
-    display: flex;
-}
-
-.link_footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-}
-
-.social-media img {
-    width: auto;
-    height: 45px;
-    margin-bottom: 10px;
-}
-
-.copyright{
-    text-align: center;
-    margin: 35px 0 20px;
-    color: #fff;
-}
-
-
-/* Tablettes et petits écrans */
-@media (max-width: 1024px) {
-    .header, .hero, .conviction, .guiartech, .youtube, .volunteering {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .hero-text{
-        width: 59%;
-        margin-left: 0;
-        margin-top: -40px;
-    }
-
-    .span_nav{
-        font-size: 2.5rem;
-    }
-
-    .title_h1{
-        font-size: 1.5rem;
-    }
-
-    .title_h2{
-        margin-top: 51px;
-    }
-
-    #portfolio{
-        margin-bottom: -10px;
-    }
-
-    .carousel_title{
-        margin-top: 20px;
-    }
-    
-    .hero, .conviction, .guiartech, .youtube, .volunteering {
-        height: 350px;
-        padding: 10px;
-    }
-    
-    .hero-text, .conviction-text, .guiartech-text, .youtube-text, .volunteering-text {
-        max-width: 80%;
-    }
-
-    .hero-vertical-rectangle, .conviction-rectangle, .guiartech-rectangle, .youtube-rectangle, .volunteering-rectangle {
-        width: 50%;
-        height: 60px;
-    }
-    
-    .button-contact, .button-visit, .btn-contact-footer {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .nav_list {
-        gap: 1.5rem;
-    }
-    
-    .carousel img, .second_carousel img {
-        height: 50px;
-    }
-
-    #carousel-container {
-        width: 35%;
-        height: 65%;
-        right: 12%;
-        top: 14%;
-    }
-
-    #carousel_container_youtube {
-        width: 25%;
-        height: 70%;
-        right: 53%;
-    }
-
-    #carousel_container_volunteering {
-        width: 32%;
-        height: 70%;
-        right: 17%;
-        
-    }
-
-    .hero_paragraph, .paragraph_conviction, .paragraph_youtube, .paragraph_guiartech, .paragraph_voluteering {
-        font-size: 15px;
-        padding: 0;
-        width: auto;
-    }
-
-    .button-visit {
-     padding: 0.55rem 1.5rem;
-        font-size: 1rem;   
-        margin-left: 34%;   
-    }
-    
-    /* Effet de survol */
-    .button-visit:hover {
-        background: #ff9900;
-        color: #000;
-        border-color: #111103de; /* Change uniquement la couleur de la bordure */
-    }
-
-}
-
-
-
-
-@media (min-width: 414px) and (max-width: 678px) {
-    .header{
-        padding: 7px 0 0 0;
-    }
-
-    .nav_list {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        gap: 0;
-        top: 38px;
-        right: 0;
-        background: rgba(33, 31, 31, 0.555);  
-        border-top: 3px solid #ff9900;
-        border-bottom: 3px solid #ff9900;
-        padding: 0;
-        margin: 0;
-        width: 106px; /* Ajuste la largeur selon tes besoins */
-        transform: translateX(100%); /* Positionne le menu hors de l'écran */
-        transition: transform 0.3s ease; /* Transition pour l'animation */
-        z-index: 1000;
-    }
-
-    .nav_list.active {
-        transform: translateX(0); /* Fait glisser le menu dans le cadre */
-    }
-
-    .nav_item {
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    .nav_link {
-        color: #fff;
-        font-size: 1rem;
-        text-decoration: none;
-        font-weight:400;
-    }
-
-    .hero, .conviction, .guiartech {
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 500px;
-    }
-
-    .conviction, .guiartech {
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 500px;
-    }
-
-    /* conviction */
-
-    .conviction {
-        height: 600px;
-        display: flex;
-        justify-content: space-between;
-        background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
-        background-size: 95%;
-        background-repeat: no-repeat;
-        background-position: 10% 4%;
-        position: relative;
-        z-index: 3000;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .conviction_h2{
-        position: absolute;
-        top: 15px;
-    }
-
-    .conviction-text{
-        width: 100%;
-    }
-
-    .paragraph_conviction{
-        margin-top: 50px;
-        font-size: 14px;
-    }
-    
-    .conviction-rectangle {
-        position: absolute;
-        width: 50%;
-        height: 60px;
-        flex-shrink: 0;
-        background: rgba(218, 218, 218, 0.11);
-        top: 60px;
-        right: 0px;
-        z-index: 20;
-    }
-    
-    
-    .conviction_h2, .h2_guiartech, .h2_youtube, .h2_volunteering{
-        margin-top: 72px;
-        text-align: center;
-    }
-    
-    .survol_guiartech{
-        position: absolute;
-        height: 200%;
-        width: auto;
-        z-index: 20;
-        
-    }
-    
-    .conviction-vertical-rectangle {
-        position: absolute;
-        bottom: 34px;
-        left: 0px;
-        width: 110px;
-        height: 271px;
-        background: rgba(223, 133, 57, 0.20);
-    }
-    
-    .conviction-horizontal-rectangle {
-        position: absolute;
-        bottom: 34px;
-        left: 0;
-        width: 262px;
-        height: 98px;
-        background: rgba(218, 218, 218, 0.11);
-    }
-    
-    .stats-conviction {
-        display: flex;
-        justify-content: space-around;
-        background-color: #1a1a1a;
-        padding: 2rem 0;
-    }
-    
-    .stats-conviction img {
-        width: 45px;
-        height: 45px;
-    }
-
-    /* conviction */
-
-    .youtube{
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 550px;
-    }
-
-    .volunteering{
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 550px;
-    }
-
-    .hero {
-        width: auto;
-        display: flex;
-        background: url(/assets/images/backgrounds/Accueil-background.png) no-repeat center center;
-        background-size: 144%;
-        background-position: 100% 15%;
-        transition: background 0.5s ease-in;
-        flex-direction: column;
-    }
-
-    .hero:hover{
-        background: url('/assets/images/backgrounds/Contact-background.png') no-repeat center center; /* Ajouter l'image de fond */
-        background-size: 134%;
-        background-position: 75% 19%;
-    }
-
-    .contact_marcones{
-        display: none;
-    }
-
-    .span_nav {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    .hero-text {
-        height: 520px;
-        width: auto;
-        margin-top: 8px;
-    }
-
-    .hero-ellipse {
-        position: absolute;
-        width: 90px;
-        height: 90px;
-        background: #df843929;
-        bottom: 0;
-        margin-right: 34%;
-        z-index: 10;
-    }
-
-    .title_h1{
-        margin-top: 215px;
-        font-size: 18px;
-    }
-
-    .title_h1, .title_h2{
-        font-size: 18px;
-    }
-
-    .carousel img, .carousel_conviction img, .social-media img{
-        height: 30px;
-    }
-
-    .title_h2{
-        margin-top: 7px;
-    }
-
-    .button-contact {
-        position: absolute;
-        background: #000;
-        color: #fff;
-        border-color: #ff9900;
-        padding: 0.55rem 2.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 21px;
-        margin: -15px -130px;
-        z-index: 30;
-        transition: display 0.5s ease;
-    }
-
-    .hero_paragraph, .title_h1{
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    .logo-icon {
-        padding: 0.1rem 0.7rem;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        right: 20px;
-        z-index: 1001;
-    }
-
-    .h3_projects{
-        font-size: 14px;
-    }
-
-    /* Guiartech */
-
-    .guiartech {
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 320px;
-    }
-
-    #carousel-container {
-        width: 38%;
-        height: 53%;  
-    }
-
-    .presentation_guiartech {
-        top: 19%;
-        z-index: 20;
-        opacity: 1;
-        background-image: url(/assets/images/Portfolio/Laptop_incliné_black.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        height: 200px;
-    }
-
-    .h2_guiartech{
-        position: absolute;
-        margin-left: 10%;
-        margin-top: 20px;
-    }
-
-    .paragraph_guiartech {
-        margin-top: 70px;
-        font-size: 14px;
-        line-height: 135%; 
-    }
-
-    .guiartech-rectangle, .conviction-rectangle, .youtube-rectangle, .volunteering-rectangle{
-        height: 30px;
-        margin-top: -40px;
-    }
-
-
-
-    .conviction-ellipse, .guiartech-ellipse, .volunteering-ellipse{
-        display: none;
-    }
-
-    .conviction-ellipse, .youtube-ellipse{
-        height: 90px;
-        width: 90px;
-        margin-top: -20px;
-    }
-
-    .guiartech-horizontal-rectangle {
-        position: absolute;
-        bottom: 10px;
-        right: 0;
-        width: 262px;
-        height: 98px;
-        background: rgba(218, 218, 218, 0.11);
-    }
-
-    .button-visit {
-        position: absolute;
-        background: #111103de;
-        color: #fff;
-        border: 2px solid #ff9900;
-        padding: 0.55rem 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 21px;
-        bottom: 0px;
-        margin-left: 34%;
-        z-index: 30;
-        box-sizing: border-box;
-        transition: background 0.5s ease, border-color 0.5s ease;
-    }
-
-    .button-visit {
-        position: absolute;
-        background: #111103de;
-        color: #fff;
-        border: 2px solid #ff9900;
-        padding: 0.55rem 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 21px;
-        bottom: 0px;
-        margin-left: 34%;
-        z-index: 30;
-        box-sizing: border-box;
-        transition: background 0.5s ease, border-color 0.5s ease;
-    }
-
-    /* youtube */
-
-    .youtube{
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 350px;
-    }
-
-    .paragraph_youtube{
-        margin-top: 50px;
-        padding-right: 12px;
-        font-size: 14px;
-    }
-
-    .youtube-horizontal-rectangle {
-        bottom: 10px;
-    }
-
-    .youtube-ellipse{
-        display: none;
-    }
-
-    #carousel_container_youtube {
-        width: 32%;
-        height: 72%;
-        position: absolute;
-        right: 57%;
-        transform-origin: center;
-        transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    }
-
-    /* voluteering */
-
-    .volunteering {
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 320px;
-    }
-
-    .volunteering-horizontal-rectangle {
-        position: absolute;
-        bottom: 10px;
-        right: 0;
-        width: 262px;
-        height: 98px;
-        background: rgba(218, 218, 218, 0.11);
-    }
-
-    .paragraph_voluteering{
-        margin-top: 70px;
-        font-size: 14px;
-        line-height: 135%; 
-    }
-
-    .h2_volunteering{
-        position: absolute;
-        margin-left: 10%;
-        margin-top: 20px;
-    }
-
-    #carousel_container_volunteering {
-        width: 36%;
-        height: 76%;
-        position: absolute;
-        right: 11%;
-        transform-origin: center;
-        transform: perspective(800rem) rotateX(25deg) rotateY(0deg) rotateZ(0deg) scale(1.35);
-    }
-
-
-.conviction-vertical-rectangle, .volunteering-vertical-rectangle, .youtube-vertical-rectangle, .guiartech-vertical-rectangle {
-    width: 60px;
-}
-
-} 
-
-@media (min-width: 320px) and (max-width: 414px) {
-    .header{
-        padding: 7px 0 0 0;
-    }
-
-    .hero, .conviction, .guiartech {
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 500px;
-    }
-
-    .youtube{
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 550px;
-    }
-
-    .volunteering{
-        display: flex;
-        padding: 5px;
-        width: 100%;
-        height: 550px;
-    }
-
-    .hero {
-        width: auto;
-        display: flex;
-        background: url(/assets/images/backgrounds/Accueil-background.png) no-repeat center center;
-        background-size: 144%;
-        background-position: 100% 15%;
-        transition: background 0.5s ease-in;
-        flex-direction: column;
-    }
-
-    .hero:hover{
-        background: url('/assets/images/backgrounds/Contact-background.png') no-repeat center center; /* Ajouter l'image de fond */
-        background-size: 134%;
-        background-position: 75% 19%;
-    }
-
-    .span_nav {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    .hero-text {
-        height: 520px;
-        width: auto;
-        margin-top: 8px;
-    }
-
-    .hero-ellipse {
-        position: absolute;
-        width: 90px;
-        height: 90px;
-        background: #df843929;
-        bottom: 0;
-        margin-right: 34%;
-        z-index: 10;
-    }
-
-    .title_h1{
-        margin-top: 215px;
-        font-size: 18px;
-    }
-
-    .title_h1, .title_h2{
-        font-size: 13px;
-    }
-
-    .carousel img, .carousel_conviction img, .social-media img{
-        height: 30px;
-    }
-
-    .title_h2{
-        margin-top: 22px;
-    }
-
-    .button-contact {
-        position: absolute;
-        background: #000;
-        color: #fff;
-        border-color: #ff9900;
-        padding: 0.55rem 2.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 21px;
-        margin: -15px -130px;
-        z-index: 30;
-        transition: display 0.5s ease;
-    }
-
-    .hero_paragraph, .title_h1{
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    .logo-icon {
-        padding: 0.1rem 0.7rem;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        z-index: 1001;
-    }
-
-    .volunteering-text,  .guiartech-text, .conviction-text{
-        display: flex;
-        width: 100%;
-        padding: 0;
-        flex-direction: column;
-    }
-
-    .youtube-text{
-        display: flex;
-        width: 78%;
-        padding-right: 15px;
-        flex-direction: column;
-    }
-
-    .youtube-text, .conviction-text{
-        margin-left: -70px;
-    }
-
-    .paragraph_conviction{
-        font-size: 14px;
-        font-weight: 400;
-        margin-top: 220px;
-        margin-left: -60px;
-        margin-right: 0px;
-    }
-
-     .paragraph_guiartech, .paragraph_voluteering{
-        font-size: 14px;
-        font-weight: 400;
-        margin-top: 210px;
-        margin-left: 10px;
-        margin-right: -15px;
-    }
-
-    .paragraph_youtube{
-        font-size: 14px;
-        font-weight: 400;
-        margin-top: 250px;
-        margin-left: -50px;
-
-    }
-
-    .nav_list {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        gap: 0;
-        top: 38px;
-        right: 0;
-        background: rgba(33, 31, 31, 0.555);  
-        border-top: 3px solid #ff9900;
-        border-bottom: 3px solid #ff9900;
-        padding: 0;
-        margin: 0;
-        width: 106px; /* Ajuste la largeur selon tes besoins */
-        transform: translateX(100%); /* Positionne le menu hors de l'écran */
-        transition: transform 0.3s ease; /* Transition pour l'animation */
-        z-index: 1000;
-    }
-      
-     .conviction-vertical-rectangle, .conviction-ellipse, .hero-vertical-rectangle,  .guiartech-vertical-rectangle, .youtube-vertical-rectangle {
-        display: none;
-    }
-
-    .carousel_logos {
-        width: 100%;
-        overflow: hidden;
-        background-color: #1a1a1a;
-        position: relative;
-    }
-
-    .guiartech-rectangle, .conviction-rectangle, .youtube-rectangle, .volunteering-rectangle{
-        height: 30px;
-        margin-top: -40px;
-    }
-
-    .guiartech-ellipse, .volunteering-ellipse{
-        height: 90px;
-        width: 90px;
-        margin-top: -20px;
-    }
-
-    .conviction-ellipse, .youtube-ellipse{
-        height: 90px;
-        width: 90px;
-        margin-top: -20px;
-    }
-
-    .my-projects-top{
-        height: 45px;
-    }
-
-    .h3_projects{
-        font-size: 12px;
-    }
-
-    .conviction {
-        display: flex;
-        justify-content: space-between;
-        background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
-        background-size: 95%;
-        background-repeat: no-repeat;
-        background-position: 10% 4%;
-        position: relative;
-        z-index: 3000;
-    }
-
-    .conviction_h2{
-        position: absolute;
-        margin-top: 22px;
-        margin-left: 52%;
-    }
-
-    .button-visit {
-        position: absolute;
-        background: #111103de;
-        color: #fff;
-        border: 2px solid #ff9900;
-        padding: 0.55rem 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 21px;
-        bottom: -30px;
-        margin-left: 34%;
-        z-index: 30;
-        box-sizing: border-box;
-        transition: background 0.5s ease, border-color 0.5s ease;
-    }
-
-    #carousel-container {
-        width: 68%;
-        height: 64%;
-        right: 19%;
-        top: 20%;
-    }
-
-    #carousel_container_youtube {
-        width: 58%;
-        height: 49%;
-        right: 27%;
-    }
-
-    #carousel_container_volunteering {
-        width: 58%;
-        height: 46%;
-        right: 17%;
-    }
-
-    .copyright{
-        font-size: 12px;
-    }
-    
   }
-  
+
+  .guiartech-rectangle,
+  .conviction-rectangle,
+  .youtube-rectangle,
+  .volunteering-rectangle {
+    height: 30px;
+    margin-top: -40px;
+  }
+
+  .guiartech-ellipse,
+  .volunteering-ellipse {
+    height: 90px;
+    width: 90px;
+    margin-top: -20px;
+  }
+
+  .conviction-ellipse,
+  .youtube-ellipse {
+    height: 90px;
+    width: 90px;
+    margin-top: -20px;
+  }
+
+  .my-projects-top {
+    height: 45px;
+  }
+
+  .h3_projects {
+    font-size: 12px;
+  }
+
+  .conviction {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/assets/images/backgrounds/Conviction-background-2.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 10% 4%;
+    position: relative;
+    z-index: 3000;
+  }
+
+  .conviction_h2 {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 52%;
+  }
+
+  .button-visit {
+    position: absolute;
+    background: #111103de;
+    color: #fff;
+    border: 2px solid #ff9900;
+    padding: 0.55rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 21px;
+    bottom: -30px;
+    margin-left: 34%;
+    z-index: 30;
+    box-sizing: border-box;
+    transition: background 0.5s ease, border-color 0.5s ease;
+  }
+
+  #carousel-container {
+    width: 68%;
+    height: 64%;
+    right: 19%;
+    top: 20%;
+  }
+
+  #carousel_container_youtube {
+    width: 58%;
+    height: 49%;
+    right: 27%;
+  }
+
+  #carousel_container_volunteering {
+    width: 58%;
+    height: 46%;
+    right: 17%;
+  }
+}
